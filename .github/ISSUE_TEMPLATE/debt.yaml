@@ -25,27 +25,27 @@ body:
   #   validations:
   #     required: true
   
-  - type: dropdown
-    id: benefit
-    attributes:
-      label: Benefício
-      options:
-        - Alto
-        - Médio
-        - Baixo
-    validations:
-      required: true
+  # - type: dropdown
+  #   id: benefit
+  #   attributes:
+  #     label: Benefício
+  #     options:
+  #       - Alto
+  #       - Médio
+  #       - Baixo
+  #   validations:
+  #     required: true
   
-  - type: dropdown
-    id: effort
-    attributes:
-      label: Esforço
-      options:
-        - Alto
-        - Médio
-        - Baixo
-    validations:
-      required: true
+  # - type: dropdown
+  #   id: effort
+  #   attributes:
+  #     label: Esforço
+  #     options:
+  #       - Alto
+  #       - Médio
+  #       - Baixo
+  #   validations:
+  #     required: true
 
   - type: textarea
     id: problemDescription
