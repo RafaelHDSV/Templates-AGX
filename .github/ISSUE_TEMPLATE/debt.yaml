@@ -11,19 +11,19 @@ body:
     validations:
       required: true
 
-  # - type: checkboxes
-  #   id: typeOfTechnicalDebt
-  #   attributes:
-  #     label: 📊 Tipo de Dívida Técnica
-  #     options:
-  #       - label: "Refatoração de código"
-  #       - label: "Melhoria de performance"
-  #       - label: "Melhoria de legibilidade"
-  #       - label: "Remoção de código duplicado"
-  #       - label: "Atualização de dependências"
-  #       - label: "Outro: ___________"
-  #   validations:
-  #     required: true
+  - type: checkboxes
+    id: typeOfTechnicalDebt
+    attributes:
+      label: 📊 Tipo de Dívida Técnica
+      options:
+        - label: "Refatoração de código"
+        - label: "Melhoria de performance"
+        - label: "Melhoria de legibilidade"
+        - label: "Remoção de código duplicado"
+        - label: "Atualização de dependências"
+        - label: "Outro: ___________"
+    validations:
+      required: true
   
   # - type: dropdown
   #   id: benefit
