@@ -1,4 +1,4 @@
-name: debt
+name: debtYAML
 description: Dívida técnica, refatoração ou limpeza de código
 title: "Debt: Descrição clara do trabalho técnico"
 
@@ -11,19 +11,19 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
-    id: typeOfTechnicalDebt
-    attributes:
-      label: 📊 Tipo de Dívida Técnica
-      options:
-        - label: "Refatoração de código"
-        - label: "Melhoria de performance"
-        - label: "Melhoria de legibilidade"
-        - label: "Remoção de código duplicado"
-        - label: "Atualização de dependências"
-        - label: "Outro: ___________"
-    validations:
-      required: true
+  # - type: checkboxes
+  #   id: typeOfTechnicalDebt
+  #   attributes:
+  #     label: 📊 Tipo de Dívida Técnica
+  #     options:
+  #       - label: "Refatoração de código"
+  #       - label: "Melhoria de performance"
+  #       - label: "Melhoria de legibilidade"
+  #       - label: "Remoção de código duplicado"
+  #       - label: "Atualização de dependências"
+  #       - label: "Outro: ___________"
+  #   validations:
+  #     required: true
   
   - type: dropdown
     id: benefit
@@ -132,7 +132,7 @@ body:
     attributes:
       label: 📅 Estimativa de Tempo
       value: |
-      **Tempo estimado**: [ex: 8 horas / 2 dias]
+      Tempo estimado: [ex: 8 horas / 2 dias]
     validations:
       required: true
 
