@@ -1,0 +1,116 @@
+
+name: investigationYAML
+description: Investigação técnica ou pesquisa de viabilidade
+title: 'Investigation: Descrição da investigação'
+
+body:
+  - type: textarea
+    id: 
+    attributes:
+      label: 🔍 Objetivo da Investigação
+      value: |
+        - Descreva claramente o que precisa ser investigado e por quê.
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: ❓ Questões Principais
+      value: |
+        - Liste as questões-chave que precisam ser respondidas:
+
+        1. Questão 1?
+        2. Questão 2?
+        3. Questão 3?
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 🎯 Critério de Sucesso
+      value: |
+        - Defina como você saberá que a investigação foi bem-sucedida. O que precisa ser descoberto ou validado?
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 📚 Contexto e Background
+      value: |
+        - Informações de contexto que ajudem a entender a investigação:
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 🔗 Referências e Recursos
+      value: |
+        - - [Links para documentação]
+        - [Links para exemplos]
+        - [Links para recursos úteis]
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 🛠️ Abordagem Proposta
+      value: |
+        - Descreva como você planeja investigar este assunto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 📋 Tarefas e Steps
+      value: |
+        - - [ ] Step 1: [descrição]
+        - [ ] Step 2: [descrição]
+        - [ ] Step 3: [descrição]
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 📊 Resultado Esperado
+      value: |
+        - Descreva o que se espera descobrir ou validar ao final da investigação:
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 🔗 Saídas Próximas
+      value: |
+        - Caso a investigação tenha resultado positivo ou negativo, o que deve acontecer em seguida?
+
+        - **Se viável**: [próxima ação]
+        - **Se não viável**: [próxima ação]
+        - **Se parcialmente viável**: [próxima ação]
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 📅 Estimativa de Tempo
+      value: |
+        - **Tempo estimado**: [ex: 4 horas / 1 dia]
+    validations:
+      required: true
+
+  - type: textarea
+    id: 
+    attributes:
+      label: 📝 Observações Adicionais
+      value: |
+        - [Contexto adicional que possa ser útil]
+    validations:
+      required: true
