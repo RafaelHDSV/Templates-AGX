@@ -1,0 +1,101 @@
+name: improvementYAML
+description: Melhoria de uma funcionalidade existente
+title: "Improvement: Descrição clara da melhoria"
+
+body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 💡 Motivação
+      value: |
+        - Explique detalhadamente por que essa melhoria é necessária. Qual problema ela resolve? Qual é o contexto?
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Objetivo
+      value: |
+        - Descreva os objetivos específicos e mensuráveis desta melhoria.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expectedImpact
+    attributes:
+      label: 📊 Impacto Esperado
+      value: |
+        - **Performance**: [Ex: Redução de 60% no tempo de carregamento da listagem de propostas (de 3s para 1.2s)]
+        - **UX**: [Ex: Experiência mais fluida, menos frustrações de usuários esperando]
+        - **Técnico**: [se aplicável - Ex: Implementação de paginação e lazy loading reduz carga no servidor]
+        - **Negócio**: [se aplicável - Redução de bounce rate, maior conversão em simulações]
+    validations:
+      required: true
+
+  - type: textarea
+    id: currentBehavior
+    attributes:
+      label: 🔄 Comportamento Atual
+      value: |
+        - Breve descrição de como a funcionalidade funciona atualmente.
+    validations:
+      required: true
+
+  - type: textarea
+    id: behaviorAfterImprovement
+    attributes:
+      label: ✨ Comportamento Após Melhoria
+      value: |
+        - Breve descrição de como a funcionalidade funcionará após a implementação.
+    validations:
+      required: true
+
+  - type: textarea
+    id: designAndReferences
+    attributes:
+      label: 🎨 Design e Referências
+      value: |
+        ### Screenshots Atuais
+        [Adicionar capturas do comportamento atual]
+
+        ### Figma/Design
+        [Link do Figma, se aplicável]
+
+        ### Referências Externas
+        [Links para exemplos, benchmarks, ou inspirações]
+    validations:
+      required: true
+
+  - type: textarea
+    id: technicalDetails
+    attributes:
+      label: 🛠️ Detalhes Técnicos [Opcional]
+      value: |
+        Informações técnicas relevantes para a implementação:
+          - Tecnologias envolvidas
+          - Componentes afetados
+          - Possíveis quebras de compatibilidade
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptanceCriteria
+    attributes:
+      label: ✅ Critérios de Aceitação
+      value: |
+        - [ ] Melhoria implementada conforme especificado
+        - [ ] Sem regressões
+        - [ ] Documentação atualizada (se aplicável)
+        - [ ] Testado em ambiente de staging
+    validations:
+      required: true
+
+  - type: textarea
+    id: additionalInformation
+    attributes:
+      label: 📝 Informações Adicionais
+      value: |
+        [Contexto adicional que possa ser útil]
+    validations:
+      required: true
