@@ -68,7 +68,7 @@ body:
     attributes:
       label: 📊 Impacto Esperado
       description: Descreva a abordagem para resolver este problema técnico.
-      value: |
+      value:
       - **Performance**: [Ex: Ganho de ~Xms por validação, já que será centralizada em um serviço único (menos re-cálculos)]
       - **Manutenibilidade**: [Ex: Código fica 80% mais legível, facilita adicionar novas validações (CEP, CNPJ) no futuro]
       - **Segurança**: [Ex: Centralizar validação reduz risco de brechas de segurança na implementação de X]
@@ -79,7 +79,7 @@ body:
     id: risksAndConsiderations
     attributes:
       label: ⚠️ Riscos e Considerações
-      value: |
+      value:
       - Possíveis regressões: [descrever]
       - Componentes afetados: [listar]
       - Dependências: [listar]
