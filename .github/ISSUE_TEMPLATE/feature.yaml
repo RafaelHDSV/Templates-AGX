@@ -59,7 +59,7 @@ body:
   - type: input
     id: figma
     attributes:
-      label: ""
+      label: " "   # ← label invisível, obrigatório para GitHub
       placeholder: "https://www.figma.com/file/..."
     validations:
       required: false
