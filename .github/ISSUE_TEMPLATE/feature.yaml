@@ -1,6 +1,6 @@
 name: "Nova Funcionalidade"
 description: "Implementação de nova funcionalidade"
-title: " "
+title: "[FEATURE] "
 
 body:
   - type: input
