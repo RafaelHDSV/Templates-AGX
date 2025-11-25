@@ -1,4 +1,4 @@
-name: problemYAML
+name: problem
 description: Relatar erro ou problema identificado
 title: "[CRÍTICO/ALTO/MÉDIO] Erro ao realizar função X"
 
