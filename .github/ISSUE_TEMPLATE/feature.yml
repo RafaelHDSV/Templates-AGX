@@ -52,14 +52,11 @@ body:
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: "### 🔗 Link do Figma (opcional)"
-
   - type: input
-    id: figma
+    id: Figma
     attributes:
-      label: " "   # ← label invisível, obrigatório para GitHub
+      label: "🔗 Link do Figma"
+      description: "Link para o design da funcionalidade no Figma."
       placeholder: "https://www.figma.com/file/..."
     validations:
       required: false

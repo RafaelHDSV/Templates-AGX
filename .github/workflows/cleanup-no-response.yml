@@ -1,0 +1,45 @@
+name: Cleanup empty issue sections
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove sections with "_No response_"
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            // 1. Pega o conteúdo atual da issue
+            const { data: issue } = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number: issueNumber
+            });
+
+            let body = issue.body;
+
+            // 2. Regex para remover blocos:
+            // ### Algum título
+            // _No response_
+            body = body.replace(/### .*?\n_No response_\n?/g, '');
+
+            // 3. Remove quebras duplas excessivas
+            body = body.replace(/\n{3,}/g, '\n\n');
+
+            // 4. Atualiza a issue
+            await github.rest.issues.update({
+              owner,
+              repo,
+              issue_number: issueNumber,
+              body
+            });
