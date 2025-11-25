@@ -30,16 +30,11 @@ body:
       required: true
 
   - type: textarea
-    id: scope
+    id: checklist
     attributes:
-      label: "🧭 Escopo"
+      label: "✅ Checklist"
       description: "Liste exatamente o que faz parte deste desenvolvimento."
       value: "- [ ] "
-      placeholder: |
-        Itens inclusos:
-        - [ ] Ex: Cálculo de simulação com múltiplos prazos
-        - [ ] Ex: Histórico local de simulações
-        - [ ] Ex: Validação no formulário
     validations:
       required: true
 
@@ -57,53 +52,23 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: affected_users
+  - type: input
+    id: Figma
     attributes:
-      label: "👥 Usuários Afetados"
-      description: "Quem utilizará esta feature? Como será afetado?"
-      placeholder: |
-        Exemplos:
-        - Administradores terão acesso a X
-        - Clientes finais verão nova opção Y
+      label: "🔗 Link do Figma"
+      description: "Link para o design da funcionalidade no Figma."
+      placeholder: "https://www.figma.com/file/..."
     validations:
       required: false
 
-  - type: textarea
-    id: design_references
+  - type: input
+    id: drawio
     attributes:
-      label: "🎨 Design e Recursos Visuais"
-      description: "Inclua links ou anexos de design, fluxos e referências."
-      placeholder: |
-        Exemplos:
-        - Link do Figma
-        - Fluxo do usuário
-        - Regras de UX ou validações visuais
+      label: "🔗 Link do Diagrama (draw.io ou similar)"
+      description: "Link para diagramas relevantes relacionados à funcionalidade."
+      placeholder: "https://app.diagrams.net/..."
     validations:
       required: false
-
-  - type: textarea
-    id: implementation_details
-    attributes:
-      label: "🛠️ Detalhes de Implementação"
-      description: "Informações técnicas úteis para desenvolvimento."
-      placeholder: |
-        Arquitetura:
-        - Descrever mudanças necessárias (novos endpoints, camadas, padrões)
-
-        Componentes Afetados:
-        - Listar arquivos, páginas, módulos ou serviços alterados
-
-        Dependências:
-        - APIs, libs, serviços internos
-
-        Considerações Técnicas:
-        - Performance
-        - Segurança
-        - Compatibilidade
-        - Feature flags (se aplicável)
-    validations:
-      required: true
 
   - type: textarea
     id: acceptance_criteria
@@ -121,7 +86,7 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     id: references_context
     attributes:
       label: "🔗 Referências e Contexto Adicional"
@@ -134,7 +99,7 @@ body:
     validations:
       required: false
 
-  - type: textarea
+  - type: input
     id: additional_notes
     attributes:
       label: "📝 Observações Adicionais"
