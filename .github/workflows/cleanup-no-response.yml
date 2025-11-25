@@ -19,7 +19,6 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
 
-            // 1. Pega o conteúdo atual da issue
             const { data: issue } = await github.rest.issues.get({
               owner,
               repo,
@@ -28,15 +27,15 @@ jobs:
 
             let body = issue.body;
 
-            // 2. Regex para remover blocos:
-            // ### Algum título
+            // Remove blocos:
+            // ### Título
+            // (uma ou mais quebras de linha)
             // _No response_
-            body = body.replace(/### .*?\n_No response_\n?/g, '');
+            body = body.replace(/### .*?\n+_No response_\n?/g, '');
 
-            // 3. Remove quebras duplas excessivas
-            body = body.replace(/\n{3,}/g, '\n\n');
+            // Remove linhas extras
+            body = body.replace(/\n{3,}/g, '\n\n').trim();
 
-            // 4. Atualiza a issue
             await github.rest.issues.update({
               owner,
               repo,
