@@ -90,7 +90,7 @@ body:
     id: references_context
     attributes:
       label: "🔗 Referências e Contexto Adicional"
-      placeholder: "Links para issues relacionadas, Documentações relevantes, Discussões anteriores, Notas de reuniões, etc."
+      placeholder: "Links para issues relacionadas, documentações relevantes, etc."
     validations:
       required: false
 
