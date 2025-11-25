@@ -1,131 +1,146 @@
 name: feature
 description: Implementação de nova funcionalidade
-title: "Feature: Descrição clara da nova funcionalidade"
+title: ""
 
 body:
   - type: textarea
     id: motivation
     attributes:
-      label: "💡 Motivação"
-      value: |
-        - Explique detalhadamente por que essa feature é importante. Qual problema resolve? Qual valor traz?
+      label: "💡 1. Motivação"
+      description: "Por que esta feature é necessária? Qual dor do usuário resolve? Qual impacto traz para o produto?"
+      placeholder: |
+        Exemplos:
+        - Usuários não conseguem visualizar X, dificultando Y.
+        - Processo atual é manual e causa erros em Z.
+        - Feature necessária para habilitar fluxo ABC.
     validations:
       required: true
 
   - type: textarea
     id: objective
     attributes:
-      label: "🎯 Objetivo"
-      value: |
-        - Descreva os objetivos específicos e o valor esperado desta nova funcionalidade.
+      label: "🎯 2. Objetivo"
+      description: "Objetivo direto e mensurável desta funcionalidade."
+      placeholder: |
+        Exemplos:
+        - Permitir que usuários consultem informações em tempo real.
+        - Reduzir o tempo do fluxo atual de 5 para 2 passos.
+        - Criar base técnica para feature futura XYZ.
     validations:
       required: true
 
   - type: textarea
     id: description
     attributes:
-      label: "📋 Descrição"
-      value: |
-        - Uma descrição detalhada da funcionalidade, incluindo fluxo de usuário e comportamentos esperados.
+      label: "📋 3. Descrição Detalhada"
+      description: "Explique o funcionamento da feature, fluxos principais e comportamento esperado."
+      placeholder: |
+        Incluir:
+        - Resumo geral da funcionalidade
+        - Regras de negócio
+        - Eventos importantes (ex: validações, triggers)
+        - Como o usuário inicia e finaliza o fluxo
     validations:
       required: true
 
   - type: textarea
     id: scope
     attributes:
-      label: "🎯 Escopo"
-      value: |
-        - O que está incluído nesta feature:
-          - [ ] Item 1 [Ex: Cálculo de simulação com diferentes prazos (12, 24, 36 meses)]
-          - [ ] Item 2 [Ex: Histórico de simulações armazenado localmente]
-          - [ ] Item 3 [Ex: Validação de CPF do cliente]
-
-        O que **NÃO** está incluído (phase 2, etc):
-          - [ ] Item 1 [Ex: Integração com API XYZ]
-          - [ ] Item 2 [Ex: Configuração de funcionalidade X]
+      label: "🧭 4. Escopo"
+      description: "Liste exatamente o que faz parte deste desenvolvimento e o que não faz."
+      placeholder: |
+        **Incluso nesta entrega:**
+        - [ ] Item 1 — Ex: Cálculo de simulação com múltiplos prazos
+        - [ ] Item 2 — Ex: Histórico local de simulações
+        - [ ] Item 3 — Ex: Validação de CPF no formulário
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: affected_users
     attributes:
-      label: "👥 Usuários Afetados"
-      value: |
-        - Descreva quem usará esta feature e como.
+      label: "👥 5. Usuários Afetados"
+      description: "Quem utilizará esta feature? Como será afetado?"
+      placeholder: |
+        Exemplos:
+        - Perfil Administrador: poderá acessar painel com métricas avançadas.
+        - Cliente final: verá nova opção de pagamento.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: design_references
     attributes:
-      label: "🎨 Design e Referências"
-      value: |
-        - ### Figma/Design
-          [Link do design no Figma]
+      label: "🎨 6. Design e Recursos Visuais"
+      description: "Inclua links, anexos e fluxos considerados."
+      placeholder: |
+        ### Figma
+        [Link do design no Figma]
 
         ### Fluxo de Usuário
-          [Descrever o fluxo passo a passo ou adicionar diagrama]
+        - Descrever fluxo
+        - Anexar ou linkar diagrama (opcional)
+
+        ### Observações de UX
+        - Regras, microinterações, validações visuais
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: implementation_details
     attributes:
-      label: "🛠️ Detalhes de Implementação"
+      label: "🛠️ 7. Detalhes de Implementação"
+      description: "Informações técnicas úteis para desenvolvimento."
       value: |
-        - Informações técnicas e considerações de implementação:
-        - ### Arquitetura
-          [Descrever mudanças arquiteturais, se houver]
-        - ### Componentes Afetados
-          [Listar componentes, módulos ou serviços afetados julgados como importante]
-        - ### Dependências
-          [Listar dependências externas ou internas]
-        - ### Considerações Técnicas
-          [Notas sobre performance, segurança, compatibilidade, etc]
+        ### Arquitetura
+        - Descrever mudanças necessárias (ex: novos endpoints, camadas, padrões)
+
+        ### Componentes Afetados
+        - Lista dos arquivos, páginas, módulos ou serviços alterados
+
+        ### Dependências
+        - APIs, libs, serviços internos
+
+        ### Considerações Técnicas
+        - Performance
+        - Segurança
+        - Compatibilidade
+        - Feature flags (se aplicável)
     validations:
       required: true
 
   - type: textarea
     id: acceptance_criteria
     attributes:
-      label: "✅ Critérios de Aceitação"
-      value: |
+      label: "✅ 8. Critérios de Aceitação"
+      description: "O que precisa acontecer para esta feature ser considerada pronta?"
+      placeholder: |
         - [ ] Feature implementada conforme especificação
-        - [ ] Testado em múltiplos navegadores (Chrome, Firefox, Safari, Edge)
-        - [ ] Sem regressões em features existentes
-        - [ ] Documentação atualizada (se aplicável)
+        - [ ] Comportamentos revisados junto ao Product Owner
+        - [ ] Sem regressões
+        - [ ] Documentação atualizada (ex: wiki, readme)
         - [ ] Code review aprovado
-        - [ ] Aprovação do Product Owner
-        - [ ] Pronto para produção
-    validations:
-      required: true
-
-  - type: textarea
-    id: estimate_deadline
-    attributes:
-      label: "📅 Estimativa e Prazo"
-      value: |
-        - **Sprint estimada**:
-        - **Prazo desejado**:
+        - [ ] Testada nos navegadores suportados (Chrome, Firefox, Safari, Edge)
+        - [ ] Pronta para produção
     validations:
       required: true
 
   - type: textarea
     id: references_context
     attributes:
-      label: "🔗 Referências e Contexto"
-      value: |
-        - [Link para issue relacionada, se houver]
-        - [Link para documentação relevante]
-        - [Link para discussão no Slack, se houver]
+      label: "🔗 10. Referências e Contexto Adicional"
+      placeholder: |
+        - Links de issues relacionadas
+        - Documentação
+        - Discussões anteriores
+        - Reuniões / decisões de produto
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: additional_notes
     attributes:
-      label: "📝 Observações Adicionais"
-      value: |
-        [Contexto adicional que possa ser útil]
+      label: "📝 11. Observações Adicionais"
+      placeholder: "Qualquer informação adicional relevante"
     validations:
-      required: true
+      required: false
