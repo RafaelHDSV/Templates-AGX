@@ -1,0 +1,136 @@
+name: problemYAML
+description: Relatar erro ou problema identificado
+title: "[CRÍTICO/ALTO/MÉDIO] Erro ao realizar função X"
+
+body:
+  - type: textarea
+    id: severidade
+    atributes:
+      label: "🚨 Severidade"
+      value: |
+        - [ ] Crítico (afeta múltiplos usuários, impacto em produção)
+        - [ ] Alto (afeta funcionalidade importante)
+        - [ ] Médio (afeta alguns usuários, workaround disponível)
+        - [ ] Baixo (cosmético ou impacto mínimo)
+    validations:
+      required: true
+
+  - type: textarea
+    id: dadosPrincipais
+    atributes:
+      label: "📋 Dados Principais"
+      value: |
+        ### Ambiente
+        - [ ] Local
+        - [ ] Homologação
+        - [ ] Produção
+
+        **Link do ambiente**: [https://www.indiky.com]
+
+        ### Produto
+        - [ ] FGTS
+        - [ ] Novo (Margem)
+        - [ ] Saque Complementar
+        - [ ] Cartão
+        - [ ] Refinanciamento
+        - [ ] Outro: ___________
+
+        ### Banco
+        - [ ] PAN
+        - [ ] PINE
+        - [ ] CREFAZ
+        - [ ] C6
+        - [ ] BMG
+        - [ ] Mercantil do Brasil
+        - [ ] iCred
+        - [ ] Outro: ___________
+
+        ### Meio de Requisição
+        - [ ] RH400
+        - [ ] API
+    validations:
+      required: true
+
+  - type: textarea
+    id: usuarioAfetado
+    atributes:
+      label: "👤 Usuário Afetado"
+      value: |
+        **Nível do usuário**: [Agx/Master/Corporação/etc]
+
+        **E-mail do usuário**: [XXX.XXX.XXX-XX]
+
+        **Quantidade de usuários afetados**: [1 ou múltiplos] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: quandoOcorreu
+    atributes:
+      label: "🕐 Quando Ocorreu"
+      value: |
+        **Data e hora do erro**: [DD/MM/YYYY HH:MM:SS]
+
+        **Primeira ocorrência**: [quando foi visto pela primeira vez]
+
+        **Frequência**: [sempre ocorre / intermitente / raro]
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricaoDoErro
+    atributes:
+      label: "📝 Descrição do Erro"
+      value: |
+        Uma descrição clara e concisa do erro encontrado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: passosParaReproduzir
+    atributes:
+      label: "🔄 Passos para Reproduzir"
+      value: |
+        1. Vá para [seção/tela]
+        2. Clique em [botão/elemento]
+        3. Preencha o campo [campo]
+        4. Observe o erro
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamentoEsperado
+    atributes:
+      label: "✅ Comportamento Esperado"
+      value: |
+        Descreva qual deveria ser o comportamento correto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamentoAtual
+    atributes:
+      label: "❌ Comportamento Atual"
+      value: |
+        Descreva o que está acontecendo agora de forma incorreta.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshotsELogs
+    atributes:
+      label: "📸 Screenshots e Logs"
+      value: |
+        ### Screenshots
+        [Adicionar capturas de tela do erro]
+    validations:
+      required: true
+
+  - type: textarea
+    id: informacoesAdicionais
+    atributes:
+      label: "📌 Informações Adicionais"
+      value: |
+        [Contexto adicional que possa ser útil]
+    validations:
+      required: true
