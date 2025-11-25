@@ -1,101 +1,110 @@
-name: improvement
-description: Melhoria de uma funcionalidade existente
-title: "Improvement: Descrição clara da melhoria"
+name: "Improvement"
+description: "Melhoria de uma funcionalidade existente"
+title: "[Improvement] "
 
 body:
   - type: textarea
     id: motivation
     attributes:
-      label: 💡 Motivação
-      value: |
-        - Explique detalhadamente por que essa melhoria é necessária. Qual problema ela resolve? Qual é o contexto?
+      label: "💡 Motivação"
+      description: "Por que esta melhoria é necessária? Qual problema ela resolve? Qual o contexto atual?"
+      placeholder: |
+        Exemplos:
+        - Processo atual é lento ou confuso para o usuário.
+        - Existem reclamações frequentes relacionadas ao fluxo X.
+        - Melhorias necessárias para aumentar performance, UX ou segurança.
     validations:
       required: true
 
   - type: textarea
     id: objective
     attributes:
-      label: 🎯 Objetivo
-      value: |
-        - Descreva os objetivos específicos e mensuráveis desta melhoria.
+      label: "🎯 Objetivo"
+      description: "O que se deseja atingir com esta melhoria?"
+      placeholder: |
+        Exemplos:
+        - Reduzir tempo de carregamento de 100ms para 30ms.
+        - Tornar o fluxo mais intuitivo para o usuário.
+        - Diminuir quantidade de erros no processo atual.
     validations:
       required: true
 
   - type: textarea
     id: expectedImpact
     attributes:
-      label: 📊 Impacto Esperado
-      value: |
-        - **Performance**: [Ex: Redução de 60% no tempo de carregamento da listagem de propostas (de 3s para 1.2s)]
-        - **UX**: [Ex: Experiência mais fluida, menos frustrações de usuários esperando]
-        - **Técnico**: [se aplicável - Ex: Implementação de paginação e lazy loading reduz carga no servidor]
-        - **Negócio**: [se aplicável - Redução de bounce rate, maior conversão em simulações]
+      label: "📊 Impacto Esperado"
+      description: "Quais ganhos são esperados após aplicar a melhoria?"
+      placeholder: |
+        Exemplos:
+        - **Performance:** Redução de X% no tempo de carregamento.
+        - **UX:** Navegação mais fluida, menos passos, menos cliques.
+        - **Técnico:** Redução de complexidade, menor carga no servidor.
+        - **Negócio:** Aumento na conversão, maior retenção, menos chamados.
     validations:
       required: true
 
   - type: textarea
     id: currentBehavior
     attributes:
-      label: 🔄 Comportamento Atual
-      value: |
-        - Breve descrição de como a funcionalidade funciona atualmente.
+      label: "🔄 Comportamento Atual"
+      description: "Explique como a funcionalidade funciona hoje."
+      placeholder: |
+        Inclua:
+        - Descrição objetiva do fluxo atual
+        - Prints se necessário
+        - Problemas identificados no comportamento atual
     validations:
       required: true
 
   - type: textarea
-    id: behaviorAfterImprovement
+    id: expectedBehavior
     attributes:
-      label: ✨ Comportamento Após Melhoria
-      value: |
-        - Breve descrição de como a funcionalidade funcionará após a implementação.
+      label: "✨ Comportamento Após a Melhoria"
+      description: "Descreva como a funcionalidade deve se comportar depois da correção/otimização."
+      placeholder: |
+        Inclua:
+        - Quais passos serão alterados
+        - Como ficará a interação do usuário
+        - Regras modificadas ou removidas
     validations:
       required: true
 
   - type: textarea
     id: designAndReferences
     attributes:
-      label: 🎨 Design e Referências
-      value: |
-        ### Screenshots Atuais
-        [Adicionar capturas do comportamento atual]
+      label: "🎨 Design & Referências"
+      description: "Inclua material visual e referências importantes."
+      placeholder: |
+        ### Screenshots Atual
+        [Adicionar capturas do comportamento atual aqui]
 
-        ### Figma/Design
-        [Link do Figma, se aplicável]
+        ### Figma / Mockups
+        [Link para o design atualizado]
 
-        ### Referências Externas
-        [Links para exemplos, benchmarks, ou inspirações]
-    validations:
-      required: true
-
-  - type: textarea
-    id: technicalDetails
-    attributes:
-      label: 🛠️ Detalhes Técnicos [Opcional]
-      value: |
-        Informações técnicas relevantes para a implementação:
-          - Tecnologias envolvidas
-          - Componentes afetados
-          - Possíveis quebras de compatibilidade
+        ### Benchmarks / Inspirações
+        [Links externos, referências de UX, etc.]
     validations:
       required: false
 
   - type: textarea
-    id: acceptanceCriteria
+    id: technicalDetails
     attributes:
-      label: ✅ Critérios de Aceitação
-      value: |
-        - [ ] Melhoria implementada conforme especificado
-        - [ ] Sem regressões
-        - [ ] Documentação atualizada (se aplicável)
-        - [ ] Testado em ambiente de staging
+      label: "🛠️ Detalhes Técnicos"
+      description: "Informações técnicas relevantes para implementação."
+      placeholder: |
+        Exemplos:
+        - Componentes que serão afetados
+        - Mudanças necessárias na API
+        - Serviços/contexts envolvidos
+        - Possíveis impactos no versionamento
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: additionalInformation
     attributes:
-      label: 📝 Informações Adicionais
-      value: |
-        [Contexto adicional que possa ser útil]
+      label: "📝 Informações Adicionais"
+      description: "Contexto extra ou informações úteis para o time."
+      placeholder: "Adicione detalhes relevantes que não se encaixam nos campos anteriores."
     validations:
-      required: true
+      required: false
