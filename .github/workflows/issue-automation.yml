@@ -7,7 +7,6 @@ on:
 permissions:
   contents: read
   issues: write
-  projects: write
 
 jobs:
   cleanup_and_add_to_project:
@@ -31,8 +30,7 @@ jobs:
 
             let body = issue.body;
 
-            // Regex corrigido: remove títulos com qualquer quantidade de quebra de linha
-            // antes do "_No response_" e remove trailing spaces/linhas
+            // Remove blocos "### Título" + "_No response_"
             body = body.replace(/### [^\n]+\n+_No response_\n*/g, '');
 
             // Remover múltiplas linhas vazias consecutivas
@@ -50,8 +48,5 @@ jobs:
       - name: Add issue to org Project
         uses: actions/add-to-project@v1
         with:
-          # 🔗 Coloque aqui o link DO PROJECT da ORGANIZAÇÃO
           project-url: https://github.com/orgs/AGX-Software/projects/18
-          
-          # token padrão é suficiente
           github-token: ${{ secrets.GITHUB_TOKEN }}
