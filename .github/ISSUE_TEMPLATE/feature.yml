@@ -34,7 +34,7 @@ body:
     attributes:
       label: "✅ Checklist"
       description: "Liste exatamente o que faz parte deste desenvolvimento."
-      value: "- [ ] "
+      placeholder: "- [ ] "
     validations:
       required: true
 
@@ -70,27 +70,11 @@ body:
     validations:
       required: false
 
-  - type: checkboxes
-    id: acceptance_criteria
-    attributes:
-      label: "✅ Critérios de Aceitação"
-      description: "O que precisa acontecer para esta feature ser considerada pronta?"
-      options:
-        - label: Feature implementada conforme especificação
-        - label: Comportamentos revisados com o Product Owner
-        - label: Sem regressões
-        - label: Documentação atualizada
-        - label: Code review aprovado
-        - label: Testado nos navegadores suportados
-        - label: Pronto para produção
-    validations:
-      required: true
-
   - type: input
     id: references_context
     attributes:
       label: "🔗 Referências e Contexto Adicional"
-      placeholder: "Links para issues relacionadas, documentações relevantes, etc."
+      description: "Links para issues relacionadas, documentações relevantes, etc."
     validations:
       required: false
 
@@ -98,6 +82,6 @@ body:
     id: additional_notes
     attributes:
       label: "📝 Observações Adicionais"
-      placeholder: "Qualquer informação complementar relevante."
+      description: "Qualquer informação complementar relevante."
     validations:
       required: false
