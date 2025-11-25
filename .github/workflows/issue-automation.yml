@@ -45,8 +45,8 @@ jobs:
             });
 
       # --- 2) ADICIONAR ISSUE AO PROJECT (ORGANIZAÇÃO) ---
-      - name: Add issue to org Project
-        uses: actions/add-to-project@v0.5.0
-        with:
-          project-url: https://github.com/orgs/AGX-Software/projects/18
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Add issue to org Project
+      #   uses: actions/add-to-project@v0.5.0
+      #   with:
+      #     project-url: https://github.com/orgs/AGX-Software/projects/18
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
