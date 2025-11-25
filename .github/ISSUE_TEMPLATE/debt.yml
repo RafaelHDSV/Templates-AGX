@@ -1,34 +1,52 @@
-name: debt
-description: Dívida técnica, refatoração ou limpeza de código
+name: "Debt"
+description: "Dívida técnica, refatoração ou limpeza de código"
 title: "Debt: Descrição clara do trabalho técnico"
 
 body:
   - type: textarea
     id: motivation
     attributes:
-      label: 🎯 Motivação
-      description: Por que este trabalho técnico é necessário? Qual é o impacto de não fazer isso?
+      label: "🎯 Motivação"
+      description: "Por que esta atividade técnica é necessária? O que acontece se não fizermos?"
+      placeholder: |
+        Exemplos:
+        - Código difícil de manter ou estender.
+        - Alto risco de regressão devido à complexidade.
+        - Acúmulo de débitos antigos que impactam velocidade do time.
+        - Arquitetura atual limita implementação de novas features.
     validations:
       required: true
 
   - type: checkboxes
-    id: typeOfTechnicalDebt
+    id: technicalDebtType
     attributes:
-      label: 📊 Tipo de Dívida Técnica
+      label: "📊 Tipo de Dívida Técnica"
+      description: "Selecione o(s) tipo(s) aplicável(is)."
       options:
         - label: "Refatoração de código"
         - label: "Melhoria de performance"
         - label: "Melhoria de legibilidade"
-        - label: "Remoção de código duplicado"
+        - label: "Remoção de duplicação"
+        - label: "Aumento de testabilidade"
         - label: "Atualização de dependências"
-        - label: "Outro: ___________"
+        - label: "Adequação de arquitetura"
+        - label: "Outro (descrever abaixo)"
     validations:
       required: true
+
+  - type: textarea
+    id: otherDebtType
+    attributes:
+      label: "📌 Outro tipo de dívida (se selecionado)"
+      placeholder: "Descreva aqui se escolheu 'Outro'"
+    validations:
+      required: false
 
   - type: dropdown
     id: benefit
     attributes:
-      label: Benefício
+      label: "📈 Benefício Esperado"
+      description: "O impacto positivo após resolver esta dívida."
       options:
         - Alto
         - Médio
@@ -39,7 +57,8 @@ body:
   - type: dropdown
     id: effort
     attributes:
-      label: Esforço
+      label: "⏳ Esforço Estimado"
+      description: "Complexidade e tempo aproximado."
       options:
         - Alto
         - Médio
@@ -50,82 +69,72 @@ body:
   - type: textarea
     id: problemDescription
     attributes:
-      label: 📝 Descrição do Problema
-      description: Descreva o código ou comportamento atual que precisa ser melhorado.
+      label: "📝 Descrição do Problema"
+      description: "Descreva o comportamento, trecho de código ou estrutura que está causando o débito."
+      placeholder: |
+        Inclua:
+        - Qual parte do sistema está afetada
+        - Qual o problema identificado
+        - Exemplos de trechos de código ou comportamentos
     validations:
       required: true
 
   - type: textarea
     id: proposedSolution
     attributes:
-      label: ✨ Solução Proposta
-      description: Descreva a abordagem para resolver este problema técnico.
+      label: "✨ Solução Proposta"
+      description: "Explique a estratégia para resolver a dívida técnica."
+      placeholder: |
+        Exemplos:
+        - Extrair lógica duplicada para um serviço unificado.
+        - Reescrever módulo utilizando padrão X.
+        - Atualizar dependência Y para versão mais recente.
     validations:
       required: true
 
   - type: textarea
     id: expectedImpact
     attributes:
-      label: 📊 Impacto Esperado
-      description: Quais melhorias se espera atingir?
-      value: |
-        - **Performance:** Ex: ganho de ~Xms por validação, já que será centralizada em um serviço único (menos re-cálculos)
-        - **Manutenibilidade:** Ex: Código fica 80% mais legível, facilita adicionar novas validações (CEP, CNPJ) no futuro
-        - **Segurança:** Ex: Centralizar validação reduz risco de brechas de segurança na implementação de X
+      label: "📊 Impacto Esperado"
+      description: "Quais melhorias serão alcançadas?"
+      placeholder: |
+        Exemplos:
+        - **Performance:** Redução de Xms no processo Y.
+        - **Manutenibilidade:** Código mais simples e modular.
+        - **Segurança:** Eliminação de riscos devido a validações fracas.
+        - **Escalabilidade:** Base pronta para recursos futuros.
     validations:
       required: true
 
   - type: textarea
     id: risksAndConsiderations
     attributes:
-      label: ⚠️ Riscos e Considerações
-      value: |
-        - Possíveis regressões: [descrever]
-        - Componentes afetados: [listar]
-        - Dependências: [listar]
+      label: "⚠️ Riscos & Considerações"
+      description: "O que pode dar errado? O que deve ser observado?"
+      placeholder: |
+        - Possíveis regressões
+        - Componentes afetados
+        - Dependências internas ou externas
+        - Mudanças que podem impactar outros fluxos
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: codeAndRelevantFiles
     attributes:
-      label: 🔗 Código e Arquivos Relevantes
-      value: |
-        - Arquivo 1: [caminho]
-        - Arquivo 2: [caminho]
-        - Arquivo 3: [caminho]
+      label: "🔗 Código e Arquivos Relevantes"
+      description: "Liste arquivos, módulos ou trechos importantes para referência."
+      placeholder: |
+        - src/modules/...
+        - src/hooks/useXYZ.ts
+        - services/abcService.ts
     validations:
-      required: true
-
-  - type: textarea
-    id: acceptanceCriteria
-    attributes:
-      label: ✅ Critérios de Aceitação
-      value: |
-        - [ ] Código refatorado conforme especificação
-        - [ ] Testes existentes continuam passando
-        - [ ] Novos testes adicionados (se necessário)
-        - [ ] Sem regressões
-        - [ ] Code review aprovado
-        - [ ] Documentação atualizada (se aplicável)
-        - [ ] Deploy seguro validado
-    validations:
-      required: true
-
-  - type: textarea
-    id: estimatedTime
-    attributes:
-      label: 📅 Estimativa de Tempo
-      value: |
-        Tempo estimado: [ex: 8 horas / 2 dias]
-    validations:
-      required: true
+      required: false
 
   - type: textarea
     id: additionalNotes
     attributes:
-      label: 📝 Observações Adicionais
-      value: |
-        [Contexto adicional que possa ser útil]
+      label: "📝 Observações Adicionais"
+      placeholder: "Informações extras, contexto ou anotações úteis."
     validations:
       required: false
