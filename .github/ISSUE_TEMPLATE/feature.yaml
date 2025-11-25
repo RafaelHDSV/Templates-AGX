@@ -3,7 +3,7 @@ description: "Implementação de nova funcionalidade"
 title: "[FEATURE] "
 
 body:
-  - type: input
+  - type: textarea
     id: motivation
     attributes:
       label: "💡 Motivação"
@@ -30,6 +30,20 @@ body:
       required: true
 
   - type: textarea
+    id: scope
+    attributes:
+      label: "🧭 Escopo"
+      description: "Liste exatamente o que faz parte deste desenvolvimento."
+      value: "- [ ] "
+      placeholder: |
+        Itens inclusos:
+        - [ ] Ex: Cálculo de simulação com múltiplos prazos
+        - [ ] Ex: Histórico local de simulações
+        - [ ] Ex: Validação no formulário
+    validations:
+      required: true
+
+  - type: textarea
     id: description
     attributes:
       label: "📋 Descrição Detalhada"
@@ -42,19 +56,6 @@ body:
         - Como o usuário inicia e finaliza o fluxo
     validations:
       required: true
-
-  - type: textarea
-    id: scope
-    attributes:
-      label: "🧭 Escopo"
-      description: "Liste exatamente o que faz parte deste desenvolvimento."
-      placeholder: |
-        Itens inclusos:
-        - [ ] Ex: Cálculo de simulação com múltiplos prazos
-        - [ ] Ex: Histórico local de simulações
-        - [ ] Ex: Validação no formulário
-    validations:
-      required: false
 
   - type: textarea
     id: affected_users
