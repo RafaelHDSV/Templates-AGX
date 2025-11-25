@@ -32,7 +32,7 @@ body:
     attributes:
       label: 🎯 Escopo
       value: |
-      'O que está incluído nesta feature:
+      - O que está incluído nesta feature:
         - [ ] Item 1 [Ex: Cálculo de simulação com diferentes prazos (12, 24, 36 meses)]
         - [ ] Item 2 [Ex: Histórico de simulações armazenado localmente]
         - [ ] Item 3 [Ex: Validação de CPF do cliente]
