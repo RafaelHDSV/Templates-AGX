@@ -1,5 +1,5 @@
-name: feature
-description: Implementação de nova funcionalidade
+name: "Feature"
+description: "Implementação de nova funcionalidade"
 title: "Feature: <descrição clara da funcionalidade>"
 
 body:
@@ -86,7 +86,7 @@ body:
     attributes:
       label: "🛠️ 7. Detalhes de Implementação"
       description: "Informações técnicas úteis para desenvolvimento."
-      value: |
+      placeholder: |
         Arquitetura:
         - Descrever mudanças necessárias (novos endpoints, camadas, padrões)
 
