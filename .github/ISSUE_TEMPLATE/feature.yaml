@@ -1,12 +1,12 @@
-name: "Feature"
+name: "Nova Funcionalidade"
 description: "Implementação de nova funcionalidade"
-title: "Feature: <descrição clara da funcionalidade>"
+title: ""
 
 body:
-  - type: textarea
+  - type: input
     id: motivation
     attributes:
-      label: "💡 1. Motivação"
+      label: "💡 Motivação"
       description: "Por que esta feature é necessária? Qual dor do usuário resolve? Qual impacto traz para o produto?"
       placeholder: |
         Exemplos:
@@ -19,7 +19,7 @@ body:
   - type: textarea
     id: objective
     attributes:
-      label: "🎯 2. Objetivo"
+      label: "🎯 Objetivo"
       description: "Objetivo direto e mensurável desta funcionalidade."
       placeholder: |
         Exemplos:
@@ -32,7 +32,7 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: "📋 3. Descrição Detalhada"
+      label: "📋 Descrição Detalhada"
       description: "Explique o funcionamento da feature, fluxos principais e comportamento esperado."
       placeholder: |
         Incluir:
@@ -46,7 +46,7 @@ body:
   - type: textarea
     id: scope
     attributes:
-      label: "🧭 4. Escopo"
+      label: "🧭 Escopo"
       description: "Liste exatamente o que faz parte deste desenvolvimento."
       placeholder: |
         Itens inclusos:
@@ -59,7 +59,7 @@ body:
   - type: textarea
     id: affected_users
     attributes:
-      label: "👥 5. Usuários Afetados"
+      label: "👥 Usuários Afetados"
       description: "Quem utilizará esta feature? Como será afetado?"
       placeholder: |
         Exemplos:
@@ -71,7 +71,7 @@ body:
   - type: textarea
     id: design_references
     attributes:
-      label: "🎨 6. Design e Recursos Visuais"
+      label: "🎨 Design e Recursos Visuais"
       description: "Inclua links ou anexos de design, fluxos e referências."
       placeholder: |
         Exemplos:
@@ -84,7 +84,7 @@ body:
   - type: textarea
     id: implementation_details
     attributes:
-      label: "🛠️ 7. Detalhes de Implementação"
+      label: "🛠️ Detalhes de Implementação"
       description: "Informações técnicas úteis para desenvolvimento."
       placeholder: |
         Arquitetura:
@@ -107,7 +107,7 @@ body:
   - type: textarea
     id: acceptance_criteria
     attributes:
-      label: "✅ 8. Critérios de Aceitação"
+      label: "✅ Critérios de Aceitação"
       description: "O que precisa acontecer para esta feature ser considerada pronta?"
       placeholder: |
         - [ ] Feature implementada conforme especificação
@@ -123,7 +123,7 @@ body:
   - type: textarea
     id: references_context
     attributes:
-      label: "🔗 9. Referências e Contexto Adicional"
+      label: "🔗 Referências e Contexto Adicional"
       placeholder: |
         Exemplos:
         - Links para issues relacionadas
@@ -136,7 +136,7 @@ body:
   - type: textarea
     id: additional_notes
     attributes:
-      label: "📝 10. Observações Adicionais"
+      label: "📝 Observações Adicionais"
       placeholder: "Qualquer informação complementar relevante."
     validations:
       required: false
