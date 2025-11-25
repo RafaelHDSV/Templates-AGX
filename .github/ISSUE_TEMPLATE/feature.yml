@@ -7,12 +7,12 @@ body:
     id: motivation
     attributes:
       label: "💡 Motivação"
-      description: "Por que esta feature é necessária? Qual dor do usuário resolve? Qual impacto traz para o produto?"
+      description: "Por que esta feature é necessária? Qual problema resolve e qual impacto traz?"
       placeholder: |
         Exemplos:
         - Usuários não conseguem visualizar X, dificultando Y.
         - Processo atual é manual e causa erros em Z.
-        - Feature necessária para habilitar fluxo ABC.
+        - Necessário para habilitar o fluxo ABC.
     validations:
       required: true
 
@@ -23,9 +23,9 @@ body:
       description: "Objetivo direto e mensurável desta funcionalidade."
       placeholder: |
         Exemplos:
-        - Permitir que usuários consultem informações em tempo real.
-        - Reduzir o tempo do fluxo atual de 5 para 2 passos.
-        - Criar base técnica para feature futura XYZ.
+        - Permitir consulta em tempo real.
+        - Reduzir tempo do fluxo de 5 para 2 passos.
+        - Criar base técnica para recurso futuro XYZ.
     validations:
       required: true
 
@@ -33,8 +33,11 @@ body:
     id: checklist
     attributes:
       label: "✅ Checklist"
-      description: "Liste exatamente o que faz parte deste desenvolvimento."
-      placeholder: "- [ ] "
+      description: "Liste exatamente o que deve ser implementado."
+      placeholder: |
+        - [ ] Criar endpoint X
+        - [ ] Implementar tela Y
+        - [ ] Ajustar fluxo Z
     validations:
       required: true
 
@@ -42,46 +45,47 @@ body:
     id: description
     attributes:
       label: "📋 Descrição Detalhada"
-      description: "Explique o funcionamento da feature, fluxos principais e comportamento esperado."
+      description: "Explique o funcionamento, regras de negócio e fluxos principais."
       placeholder: |
-        Incluir:
-        - Resumo geral da funcionalidade
+        Inclua:
+        - Resumo da funcionalidade
         - Regras de negócio
-        - Eventos ou validações importantes
-        - Como o usuário inicia e finaliza o fluxo
+        - Validações importantes
+        - Fluxo do usuário
     validations:
       required: true
 
   - type: input
-    id: Figma
+    id: figma_link
     attributes:
       label: "🔗 Link do Figma"
-      description: "Link para o design da funcionalidade no Figma."
+      description: "Design relacionado à funcionalidade."
       placeholder: "https://www.figma.com/file/..."
     validations:
       required: false
 
   - type: input
-    id: drawio
+    id: diagram_link
     attributes:
       label: "🔗 Link do Diagrama (draw.io ou similar)"
-      description: "Link para diagramas relevantes relacionados à funcionalidade."
+      description: "Diagramas relevantes."
       placeholder: "https://app.diagrams.net/..."
     validations:
       required: false
 
-  - type: input
+  - type: textarea
     id: references_context
     attributes:
       label: "🔗 Referências e Contexto Adicional"
-      description: "Links para issues relacionadas, documentações relevantes, etc."
+      description: "Links para issues relacionadas, documentação, etc."
+      placeholder: "- Issue relacionada: #123\n- Documentação: https://..."
     validations:
       required: false
 
-  - type: input
+  - type: textarea
     id: additional_notes
     attributes:
       label: "📝 Observações Adicionais"
-      description: "Qualquer informação complementar relevante."
+      description: "Informações complementares relevantes."
     validations:
       required: false
