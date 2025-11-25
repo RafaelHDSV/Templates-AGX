@@ -13,6 +13,7 @@ jobs:
   cleanup_and_add_to_project:
     runs-on: ubuntu-latest
     steps:
+
       # --- 1) LIMPAR SEÇÕES COM "_No response_" ---
       - name: Cleanup empty sections
         uses: actions/github-script@v7
@@ -30,12 +31,14 @@ jobs:
 
             let body = issue.body;
 
-            // Remove blocos com "### Título" e "_No response_"
-            body = body.replace(/### .*?\n+_No response_\n?/g, '');
+            // Regex corrigido: remove títulos com qualquer quantidade de quebra de linha
+            // antes do "_No response_" e remove trailing spaces/linhas
+            body = body.replace(/### [^\n]+\n+_No response_\n*/g, '');
 
-            // Remove excesso de quebras de linha
+            // Remover múltiplas linhas vazias consecutivas
             body = body.replace(/\n{3,}/g, '\n\n').trim();
 
+            // Atualiza issue
             await github.rest.issues.update({
               owner,
               repo,
@@ -43,10 +46,12 @@ jobs:
               body
             });
 
-      # --- 2) ADICIONAR ISSUE AO PROJETO ---
-      - name: Add issue to GitHub Project
+      # --- 2) ADICIONAR ISSUE AO PROJECT (ORGANIZAÇÃO) ---
+      - name: Add issue to org Project
         uses: actions/add-to-project@v1
         with:
-          # 🎯 ALTERE AQUI PARA O LINK DO SEU PROJECT
-          project-url: https://github.com/users/RafaelHDSV/projects/4
+          # 🔗 Coloque aqui o link DO PROJECT da ORGANIZAÇÃO
+          project-url: https://github.com/orgs/AGX-Software/projects/18
+          
+          # token padrão é suficiente
           github-token: ${{ secrets.GITHUB_TOKEN }}
