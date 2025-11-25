@@ -8,7 +8,7 @@ body:
     attributes:
       label: 💡 Motivação
       value: |
-      'Explique detalhadamente por que essa feature é importante. Qual problema resolve? Qual valor traz?'
+      - Explique detalhadamente por que essa feature é importante. Qual problema resolve? Qual valor traz?
     validations:
       required: true
   - type: textarea
@@ -16,7 +16,7 @@ body:
     attributes:
       label: 🎯 Objetivo
       value: |
-      'Descreva os objetivos específicos e o valor esperado desta nova funcionalidade.'
+      - Descreva os objetivos específicos e o valor esperado desta nova funcionalidade.
     validations:
       required: true
   - type: textarea
@@ -24,7 +24,7 @@ body:
     attributes:
       label: 📋 Descrição
       value: |
-      'Uma descrição detalhada da funcionalidade, incluindo fluxo de usuário e comportamentos esperados.'
+      - Uma descrição detalhada da funcionalidade, incluindo fluxo de usuário e comportamentos esperados.
     validations:
       required: true
   - type: textarea
@@ -39,7 +39,7 @@ body:
 
         O que **NÃO** está incluído (phase 2, etc):
         - [ ] Item 1 [Ex: Integração com API XYZ]
-        - [ ] Item 2 [EX: Configuração de funcionalidade X]'
+        - [ ] Item 2 [EX: Configuração de funcionalidade X]
     validations:
       required: true
   - type: textarea
@@ -47,7 +47,7 @@ body:
     attributes:
       label: 👥 Usuários Afetados
       value: |
-      'Descreva quem usará esta feature e como:'
+      - Descreva quem usará esta feature e como:
     validations:
       required: true
   - type: textarea
@@ -55,11 +55,11 @@ body:
     attributes:
       label: 🎨 Design e Referências
       value: |
-        '### Figma/Design
+        - ### Figma/Design
         [Link do design no Figma]
 
         ### Fluxo de Usuário
-        [Descrever o fluxo passo a passo ou adicionar diagrama]'
+        [Descrever o fluxo passo a passo ou adicionar diagrama]
     validations:
       required: true
   - type: textarea
@@ -67,7 +67,7 @@ body:
     attributes:
       label: 🛠️ Detalhes de Implementação
       value: |
-      -Informações técnicas e considerações de implementação:
+      - Informações técnicas e considerações de implementação:
       - '### Arquitetura'
       - [Descrever mudanças arquiteturais, se houver]
       - '### Componentes Afetados'
