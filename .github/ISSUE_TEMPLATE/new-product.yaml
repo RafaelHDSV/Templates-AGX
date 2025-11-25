@@ -1,4 +1,4 @@
-name: new productYAML
+name: new-product-yaml
 description: Desenvolvimento de um novo produto
 title: "[Produto] - descrição"
 
@@ -8,7 +8,30 @@ body:
     attributes:
       label: "📋 Dados Principais"
       value: |
-        - ### Meio de Requisição
+        ### Meio de Requisição
+        - [ ] RH400
+        - [ ] API
+
+        ### Banco
+        - [ ] PAN
+        - [ ] Safra
+        - [ ] C6
+        - [ ] BMG
+        - [ ] Mercantil do Brasil
+        - [ ] iCred
+        - [ ] Outro: ___________
+
+        ### Produtoaname: new-product-yaml
+description: Desenvolvimento de um novo produto
+title: "[Produto] - descrição"
+
+body:
+  - type: textarea
+    id: dadosPrincipais
+    attributes:
+      label: "📋 Dados Principais"
+      value: |
+        ### Meio de Requisição
         - [ ] RH400
         - [ ] API
 
@@ -41,7 +64,7 @@ body:
       required: true
 
   - type: textarea
-    id: objetivoEEscopo
+    id: objetivoEScopo
     attributes:
       label: "🎯 Objetivo e Escopo"
       value: |
@@ -50,11 +73,11 @@ body:
       required: true
 
   - type: textarea
-    id: dependênciasExternas
+    id: dependenciasExternas
     attributes:
       label: "📊 Dependências Externas"
       value: |
-        - - Documentação do banco: [link]
+        - Documentação do banco: [link]
         - Requisitos específicos: [descrever]
         - Pré-requisitos técnicos: [descrever]
         - Outras dependências: [descrever]
@@ -68,78 +91,78 @@ body:
       value: |
         - Objeto de inserção de proposta a ser enviado ao banco (requisitos mínimos):
 
-          \`\`\`json
-          {
-            "client": {
-              "cpf": "99999999999",
-              "name": "João da Silva",
-              "address": {
-                "zipcode": "195564",
-                "state": "SP"
-              }
+        ```json
+        {
+          "client": {
+            "cpf": "99999999999",
+            "name": "João da Silva",
+            "address": {
+              "zipcode": "195564",
+              "state": "SP"
             }
           }
-          \`\`\`
+        }
+        ```
     validations:
       required: true
 
   - type: textarea
-    id: jsonSimulação [Opcional]
+    id: jsonSimulacaoOpcional
     attributes:
-      label: "🔗 JSON Simulação [Opcional]"
+      label: "🔗 JSON Simulação (Opcional)"
       value: |
         - Objeto de simulação retornada pelo banco:
 
-          \`\`\`json
-          {
-            "simulation": {
-              "amount": 10000,
-              "rate": 0.05,
-              "installments": 24
-            }
+        ```json
+        {
+          "simulation": {
+            "amount": 10000,
+            "rate": 0.05,
+            "installments": 24
           }
-          \`\`\`
+        }
+        ```
     validations:
       required: true
 
   - type: textarea
-    id: jsonIntegração
+    id: jsonIntegracao
     attributes:
       label: "🔗 JSON Integração"
       value: |
         - Objeto de integração da proposta com auto-contratação, organizando os steps e campos:
 
-          \`\`\`json
-          {
-            "informacaoInicial": {
-              "cpf": "",
-              "nome": ""
-            },
-            "endereco": {
-              "cep": "",
-              "estado": ""
-            }
+        ```json
+        {
+          "informacaoInicial": {
+            "cpf": "",
+            "nome": ""
+          },
+          "endereco": {
+            "cep": "",
+            "estado": ""
           }
-          \`\`\`
+        }
+        ```
     validations:
       required: true
 
   - type: textarea
-    id: designEReferências
+    id: designEReferencias
     attributes:
       label: "🎨 Design e Referências"
       value: |
-        - - **Figma**: [link-do-design]
+        - **Figma**: [link-do-design]
         - **Screenshots de referência**: [adicionar imagens]
     validations:
       required: true
 
   - type: textarea
-    id: critériosDeAceição
+    id: criteriosDeAceitacao
     attributes:
-      label: "✅ Critérios de Aceição"
+      label: "✅ Critérios de Aceitação"
       value: |
-        - - [ ] API integrada com o banco
+        - [ ] API integrada com o banco
         - [ ] Fluxo de simulação funcionando
         - [ ] Fluxo de contratação funcionando
         - [ ] Testes unitários implementados
@@ -155,16 +178,20 @@ body:
       label: "📅 Estimativa e Prazo"
       value: |
         - **Sprint estimada**: 
-
-        **Prazo desejado**: 
+        - **Prazo desejado**: 
     validations:
       required: true
 
   - type: textarea
-    id: observaçõesAdicionais
+    id: observacoesAdicionais
     attributes:
       label: "📌 Observações Adicionais"
       value: |
         - [Adicionar informações relevantes]
     validations:
       required: true
+
+        - [ ] FGTS
+        - [ ] Novo (Margem)
+        - [ ] Saque Complementar
+        -
