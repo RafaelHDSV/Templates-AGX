@@ -1,6 +1,6 @@
-name: "Improvement"
+name: "Melhoria"
 description: "Melhoria de uma funcionalidade existente"
-title: "[Improvement] "
+title: "[Melhoria] "
 
 body:
   - type: textarea
