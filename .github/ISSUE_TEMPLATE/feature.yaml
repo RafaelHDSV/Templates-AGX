@@ -70,19 +70,19 @@ body:
     validations:
       required: false
 
-  - type: textarea
+  - type: checkboxes
     id: acceptance_criteria
     attributes:
       label: "✅ Critérios de Aceitação"
       description: "O que precisa acontecer para esta feature ser considerada pronta?"
-      placeholder: |
-        - [ ] Feature implementada conforme especificação
-        - [ ] Comportamentos revisados com o Product Owner
-        - [ ] Sem regressões
-        - [ ] Documentação atualizada
-        - [ ] Code review aprovado
-        - [ ] Testado nos navegadores suportados
-        - [ ] Pronto para produção
+      options:
+        - label: Feature implementada conforme especificação
+        - label: Comportamentos revisados com o Product Owner
+        - label: Sem regressões
+        - label: Documentação atualizada
+        - label: Code review aprovado
+        - label: Testado nos navegadores suportados
+        - label: Pronto para produção
     validations:
       required: true
 
@@ -90,12 +90,7 @@ body:
     id: references_context
     attributes:
       label: "🔗 Referências e Contexto Adicional"
-      placeholder: |
-        Exemplos:
-        - Links para issues relacionadas
-        - Documentações relevantes
-        - Discussões anteriores
-        - Notas de reuniões
+      placeholder: "Links para issues relacionadas, Documentações relevantes, Discussões anteriores, Notas de reuniões, etc."
     validations:
       required: false
 
