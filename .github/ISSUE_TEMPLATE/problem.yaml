@@ -5,7 +5,7 @@ title: "[CRÍTICO/ALTO/MÉDIO] Erro ao realizar função X"
 body:
   - type: textarea
     id: severidade
-    atributes:
+    attributes:
       label: "🚨 Severidade"
       value: |
         - [ ] Crítico (afeta múltiplos usuários, impacto em produção)
@@ -17,7 +17,7 @@ body:
 
   - type: textarea
     id: dadosPrincipais
-    atributes:
+    attributes:
       label: "📋 Dados Principais"
       value: |
         ### Ambiente
@@ -53,7 +53,7 @@ body:
 
   - type: textarea
     id: usuarioAfetado
-    atributes:
+    attributes:
       label: "👤 Usuário Afetado"
       value: |
         **Nível do usuário**: [Agx/Master/Corporação/etc]
@@ -66,7 +66,7 @@ body:
 
   - type: textarea
     id: quandoOcorreu
-    atributes:
+    attributes:
       label: "🕐 Quando Ocorreu"
       value: |
         **Data e hora do erro**: [DD/MM/YYYY HH:MM:SS]
@@ -79,7 +79,7 @@ body:
 
   - type: textarea
     id: descricaoDoErro
-    atributes:
+    attributes:
       label: "📝 Descrição do Erro"
       value: |
         Uma descrição clara e concisa do erro encontrado.
@@ -88,7 +88,7 @@ body:
 
   - type: textarea
     id: passosParaReproduzir
-    atributes:
+    attributes:
       label: "🔄 Passos para Reproduzir"
       value: |
         1. Vá para [seção/tela]
@@ -100,7 +100,7 @@ body:
 
   - type: textarea
     id: comportamentoEsperado
-    atributes:
+    attributes:
       label: "✅ Comportamento Esperado"
       value: |
         Descreva qual deveria ser o comportamento correto.
@@ -109,7 +109,7 @@ body:
 
   - type: textarea
     id: comportamentoAtual
-    atributes:
+    attributes:
       label: "❌ Comportamento Atual"
       value: |
         Descreva o que está acontecendo agora de forma incorreta.
@@ -118,7 +118,7 @@ body:
 
   - type: textarea
     id: screenshotsELogs
-    atributes:
+    attributes:
       label: "📸 Screenshots e Logs"
       value: |
         ### Screenshots
@@ -128,7 +128,7 @@ body:
 
   - type: textarea
     id: informacoesAdicionais
-    atributes:
+    attributes:
       label: "📌 Informações Adicionais"
       value: |
         [Contexto adicional que possa ser útil]
