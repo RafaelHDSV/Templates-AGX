@@ -52,11 +52,14 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: Figma
+  - type: markdown
     attributes:
-      label: "🔗 Link do Figma"
-      description: "Link para o design da funcionalidade no Figma."
+      value: "### 🔗 Link do Figma (opcional)"
+
+  - type: input
+    id: figma
+    attributes:
+      label: ""
       placeholder: "https://www.figma.com/file/..."
     validations:
       required: false
