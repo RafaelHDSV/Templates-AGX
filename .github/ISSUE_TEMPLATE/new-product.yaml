@@ -1,0 +1,170 @@
+name: new productYAML
+description: Desenvolvimento de um novo produto
+title: "[Produto] - descrição"
+
+body:
+  - type: textarea
+    id: dadosPrincipais
+    attributes:
+      label: "📋 Dados Principais"
+      value: |
+        - ### Meio de Requisição
+        - [ ] RH400
+        - [ ] API
+
+        ### Banco
+        - [ ] PAN
+        - [ ] Safra
+        - [ ] C6
+        - [ ] BMG
+        - [ ] Mercantil do Brasil
+        - [ ] iCred
+        - [ ] Outro: ___________
+
+        ### Produto
+        - [ ] FGTS
+        - [ ] Novo (Margem)
+        - [ ] Saque Complementar
+        - [ ] Cartão
+        - [ ] Refinanciamento
+        - [ ] Outro: ___________
+    validations:
+      required: true
+
+  - type: textarea
+    id: resumoExecutivo
+    attributes:
+      label: "📝 Resumo Executivo"
+      value: |
+        - Uma descrição clara e concisa do novo produto que está sendo implementado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: objetivoEEscopo
+    attributes:
+      label: "🎯 Objetivo e Escopo"
+      value: |
+        - Descreva os objetivos específicos desta implementação e o escopo de trabalho esperado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependênciasExternas
+    attributes:
+      label: "📊 Dependências Externas"
+      value: |
+        - - Documentação do banco: [link]
+        - Requisitos específicos: [descrever]
+        - Pré-requisitos técnicos: [descrever]
+        - Outras dependências: [descrever]
+    validations:
+      required: true
+
+  - type: textarea
+    id: jsonProposta
+    attributes:
+      label: "🔗 JSON Proposta"
+      value: |
+        - Objeto de inserção de proposta a ser enviado ao banco (requisitos mínimos):
+
+          \`\`\`json
+          {
+            "client": {
+              "cpf": "99999999999",
+              "name": "João da Silva",
+              "address": {
+                "zipcode": "195564",
+                "state": "SP"
+              }
+            }
+          }
+          \`\`\`
+    validations:
+      required: true
+
+  - type: textarea
+    id: jsonSimulação [Opcional]
+    attributes:
+      label: "🔗 JSON Simulação [Opcional]"
+      value: |
+        - Objeto de simulação retornada pelo banco:
+
+          \`\`\`json
+          {
+            "simulation": {
+              "amount": 10000,
+              "rate": 0.05,
+              "installments": 24
+            }
+          }
+          \`\`\`
+    validations:
+      required: true
+
+  - type: textarea
+    id: jsonIntegração
+    attributes:
+      label: "🔗 JSON Integração"
+      value: |
+        - Objeto de integração da proposta com auto-contratação, organizando os steps e campos:
+
+          \`\`\`json
+          {
+            "informacaoInicial": {
+              "cpf": "",
+              "nome": ""
+            },
+            "endereco": {
+              "cep": "",
+              "estado": ""
+            }
+          }
+          \`\`\`
+    validations:
+      required: true
+
+  - type: textarea
+    id: designEReferências
+    attributes:
+      label: "🎨 Design e Referências"
+      value: |
+        - - **Figma**: [link-do-design]
+        - **Screenshots de referência**: [adicionar imagens]
+    validations:
+      required: true
+
+  - type: textarea
+    id: critériosDeAceição
+    attributes:
+      label: "✅ Critérios de Aceição"
+      value: |
+        - - [ ] API integrada com o banco
+        - [ ] Fluxo de simulação funcionando
+        - [ ] Fluxo de contratação funcionando
+        - [ ] Testes unitários implementados
+        - [ ] Testes de integração implementados
+        - [ ] Documentação atualizada
+        - [ ] Homologado com o banco
+    validations:
+      required: true
+
+  - type: textarea
+    id: estimativaEPrazo
+    attributes:
+      label: "📅 Estimativa e Prazo"
+      value: |
+        - **Sprint estimada**: 
+
+        **Prazo desejado**: 
+    validations:
+      required: true
+
+  - type: textarea
+    id: observaçõesAdicionais
+    attributes:
+      label: "📌 Observações Adicionais"
+      value: |
+        - [Adicionar informações relevantes]
+    validations:
+      required: true
