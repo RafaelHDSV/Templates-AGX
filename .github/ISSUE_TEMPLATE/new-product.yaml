@@ -21,29 +21,6 @@ body:
         - [ ] iCred
         - [ ] Outro: ___________
 
-        ### Produtoaname: new-product-yaml
-description: Desenvolvimento de um novo produto
-title: "[Produto] - descrição"
-
-body:
-  - type: textarea
-    id: dadosPrincipais
-    attributes:
-      label: "📋 Dados Principais"
-      value: |
-        ### Meio de Requisição
-        - [ ] RH400
-        - [ ] API
-
-        ### Banco
-        - [ ] PAN
-        - [ ] Safra
-        - [ ] C6
-        - [ ] BMG
-        - [ ] Mercantil do Brasil
-        - [ ] iCred
-        - [ ] Outro: ___________
-
         ### Produto
         - [ ] FGTS
         - [ ] Novo (Margem)
@@ -190,8 +167,3 @@ body:
         - [Adicionar informações relevantes]
     validations:
       required: true
-
-        - [ ] FGTS
-        - [ ] Novo (Margem)
-        - [ ] Saque Complementar
-        -
