@@ -1,6 +1,6 @@
 name: feature
 description: Implementação de nova funcionalidade
-title: ""
+title: "Feature: <descrição clara da funcionalidade>"
 
 body:
   - type: textarea
@@ -38,7 +38,7 @@ body:
         Incluir:
         - Resumo geral da funcionalidade
         - Regras de negócio
-        - Eventos importantes (ex: validações, triggers)
+        - Eventos ou validações importantes
         - Como o usuário inicia e finaliza o fluxo
     validations:
       required: true
@@ -47,12 +47,12 @@ body:
     id: scope
     attributes:
       label: "🧭 4. Escopo"
-      description: "Liste exatamente o que faz parte deste desenvolvimento e o que não faz."
+      description: "Liste exatamente o que faz parte deste desenvolvimento."
       placeholder: |
-        **Incluso nesta entrega:**
-        - [ ] Item 1 — Ex: Cálculo de simulação com múltiplos prazos
-        - [ ] Item 2 — Ex: Histórico local de simulações
-        - [ ] Item 3 — Ex: Validação de CPF no formulário
+        Itens inclusos:
+        - [ ] Ex: Cálculo de simulação com múltiplos prazos
+        - [ ] Ex: Histórico local de simulações
+        - [ ] Ex: Validação no formulário
     validations:
       required: false
 
@@ -63,8 +63,8 @@ body:
       description: "Quem utilizará esta feature? Como será afetado?"
       placeholder: |
         Exemplos:
-        - Perfil Administrador: poderá acessar painel com métricas avançadas.
-        - Cliente final: verá nova opção de pagamento.
+        - Administradores terão acesso a X
+        - Clientes finais verão nova opção Y
     validations:
       required: false
 
@@ -72,17 +72,12 @@ body:
     id: design_references
     attributes:
       label: "🎨 6. Design e Recursos Visuais"
-      description: "Inclua links, anexos e fluxos considerados."
+      description: "Inclua links ou anexos de design, fluxos e referências."
       placeholder: |
-        ### Figma
-        [Link do design no Figma]
-
-        ### Fluxo de Usuário
-        - Descrever fluxo
-        - Anexar ou linkar diagrama (opcional)
-
-        ### Observações de UX
-        - Regras, microinterações, validações visuais
+        Exemplos:
+        - Link do Figma
+        - Fluxo do usuário
+        - Regras de UX ou validações visuais
     validations:
       required: false
 
@@ -92,16 +87,16 @@ body:
       label: "🛠️ 7. Detalhes de Implementação"
       description: "Informações técnicas úteis para desenvolvimento."
       value: |
-        ### Arquitetura
-        - Descrever mudanças necessárias (ex: novos endpoints, camadas, padrões)
+        Arquitetura:
+        - Descrever mudanças necessárias (novos endpoints, camadas, padrões)
 
-        ### Componentes Afetados
-        - Lista dos arquivos, páginas, módulos ou serviços alterados
+        Componentes Afetados:
+        - Listar arquivos, páginas, módulos ou serviços alterados
 
-        ### Dependências
+        Dependências:
         - APIs, libs, serviços internos
 
-        ### Considerações Técnicas
+        Considerações Técnicas:
         - Performance
         - Segurança
         - Compatibilidade
@@ -116,31 +111,32 @@ body:
       description: "O que precisa acontecer para esta feature ser considerada pronta?"
       placeholder: |
         - [ ] Feature implementada conforme especificação
-        - [ ] Comportamentos revisados junto ao Product Owner
+        - [ ] Comportamentos revisados com o Product Owner
         - [ ] Sem regressões
-        - [ ] Documentação atualizada (ex: wiki, readme)
+        - [ ] Documentação atualizada
         - [ ] Code review aprovado
-        - [ ] Testada nos navegadores suportados (Chrome, Firefox, Safari, Edge)
-        - [ ] Pronta para produção
+        - [ ] Testado nos navegadores suportados
+        - [ ] Pronto para produção
     validations:
       required: true
 
   - type: textarea
     id: references_context
     attributes:
-      label: "🔗 10. Referências e Contexto Adicional"
+      label: "🔗 9. Referências e Contexto Adicional"
       placeholder: |
-        - Links de issues relacionadas
-        - Documentação
+        Exemplos:
+        - Links para issues relacionadas
+        - Documentações relevantes
         - Discussões anteriores
-        - Reuniões / decisões de produto
+        - Notas de reuniões
     validations:
       required: false
 
   - type: textarea
     id: additional_notes
     attributes:
-      label: "📝 11. Observações Adicionais"
-      placeholder: "Qualquer informação adicional relevante"
+      label: "📝 10. Observações Adicionais"
+      placeholder: "Qualquer informação complementar relevante."
     validations:
       required: false
