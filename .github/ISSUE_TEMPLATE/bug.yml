@@ -4,7 +4,7 @@ title: "[BUG] "
 
 body:
 
-  - type: checkboxes
+  - type: dropdown
     id: severity
     attributes:
       label: "🚨 Severidade"
@@ -17,10 +17,11 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     id: environment
     attributes:
       label: "🌐 Ambiente"
+      description: "Onde o problema foi identificado."
       options:
         - label: "Local"
         - label: "Homologação"
@@ -32,11 +33,12 @@ body:
     id: environment_url
     attributes:
       label: "🔗 URL do ambiente"
+      description: "Link do ambiente onde o problema ocorreu."
       placeholder: "https://www.indiky.com"
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     id: product
     attributes:
       label: "📦 Produto"
