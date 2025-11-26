@@ -160,6 +160,8 @@ body:
     attributes:
       label: "❌ Comportamento atual"
       description: "Descreva o que está acontecendo de errado."
+    validations:
+      required: true
 
   - type: textarea
     id: expected_behavior
