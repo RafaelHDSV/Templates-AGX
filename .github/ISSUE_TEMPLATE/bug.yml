@@ -92,24 +92,6 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: user_identification
-    attributes:
-      label: "👤 Usuário afetado"
-      description: "Email, CPF, ID interno ou outro identificador."
-      placeholder: "ex: usuario@exemplo.com"
-    validations:
-      required: false
-
-  - type: input
-    id: error_datetime
-    attributes:
-      label: "🕐 Data e hora do erro"
-      description: "Quando o problema foi observado pela primeira vez."
-      placeholder: "DD/MM/YYYY HH:MM"
-    validations:
-      required: false
-
   - type: dropdown
     id: environment
     attributes:
@@ -179,6 +161,24 @@ body:
     attributes:
       label: "📌 Outro banco (se selecionado)"
       description: "Descreva aqui se escolheu 'Outro'"
+    validations:
+      required: false
+
+  - type: input
+    id: user_identification
+    attributes:
+      label: "👤 Usuário afetado"
+      description: "Email, CPF, ID interno ou outro identificador."
+      placeholder: "ex: usuario@exemplo.com"
+    validations:
+      required: false
+
+  - type: input
+    id: error_datetime
+    attributes:
+      label: "🕐 Data e hora do erro"
+      description: "Quando o problema foi observado pela primeira vez."
+      placeholder: "DD/MM/YYYY HH:MM"
     validations:
       required: false
 

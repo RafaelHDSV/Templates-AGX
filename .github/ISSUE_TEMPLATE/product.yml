@@ -7,11 +7,11 @@ body:
     id: motivation
     attributes:
       label: "💡 Motivação"
-      description: "Por que esta dívida técnica é necessária? Qual problema ela resolve? Qual o contexto atual?"
+      description: "Por que este produto é necessário? Qual problema ele resolve? Qual o contexto atual?"
       placeholder: |
-        - Código difícil de manter ou entender.
-        - Performance insatisfatória em determinada funcionalidade.
-        - Riscos de bugs ou falhas devido à complexidade atual.
+        - Mercado demanda uma solução para X.
+        - Necessário para atender a regulamentação Y.
+        - Oportunidade de negócio identificada em Z.
     validations:
       required: true
 
@@ -63,31 +63,7 @@ body:
         - Outras dependências: 
     validations:
       required: true
-
-  - type: dropdown
-    id: product
-    attributes:
-      label: "📦 Produto"
-      description: "Selecione o produto relacionado ao problema."
-      options:
-        - Indiky
-        - FGTS
-        - Novo (Margem)
-        - Saque Complementar
-        - Cartão
-        - Refinanciamento
-        - Outro
-    validations:
-      required: true
-
-  - type: input
-    id: otherProduct
-    attributes:
-      label: "📌 Outro produto (se selecionado)"
-      description: "Descreva aqui se escolheu 'Outro'"
-    validations:
-      required: false
-
+                  
   - type: dropdown
     id: bank
     attributes:
