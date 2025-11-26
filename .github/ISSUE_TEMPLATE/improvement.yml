@@ -9,7 +9,6 @@ body:
       label: "💡 Motivação"
       description: "Por que esta melhoria é necessária? Qual problema ela resolve? Qual o contexto atual?"
       placeholder: |
-        Exemplos:
         - Processo atual é lento ou confuso para o usuário.
         - Existem reclamações frequentes relacionadas ao fluxo X.
         - Melhorias necessárias para aumentar performance, UX ou segurança.
@@ -20,9 +19,8 @@ body:
     id: objective
     attributes:
       label: "🎯 Objetivo"
-      description: "O que se deseja atingir com esta melhoria?"
+      description: "Objetivo direto e mensurável desta funcionalidade."
       placeholder: |
-        Exemplos:
         - Reduzir tempo de carregamento de 100ms para 30ms.
         - Tornar o fluxo mais intuitivo para o usuário.
         - Diminuir quantidade de erros no processo atual.
@@ -30,18 +28,29 @@ body:
       required: true
 
   - type: textarea
-    id: expectedImpact
+    id: checklist
     attributes:
-      label: "📊 Impacto Esperado"
-      description: "Quais ganhos são esperados após aplicar a melhoria?"
+      label: "✅ Checklist"
+      description: "Liste exatamente o que deve ser implementado."
       placeholder: |
-        Exemplos:
-        - **Performance:** Redução de X% no tempo de carregamento.
-        - **UX:** Navegação mais fluida, menos passos, menos cliques.
-        - **Técnico:** Redução de complexidade, menor carga no servidor.
-        - **Negócio:** Aumento na conversão, maior retenção, menos chamados.
+        - [ ] Criar endpoint X
+        - [ ] Implementar tela Y
+        - [ ] Ajustar fluxo Z
     validations:
       required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📋 Descrição Detalhada"
+      description: "Explique o funcionamento, regras de negócio e fluxos principais."
+      placeholder: |
+        - Resumo da funcionalidade
+        - Regras de negócio
+        - Validações importantes
+        - Fluxo do usuário
+    validations:
+      required: true      
 
   - type: textarea
     id: currentBehavior
@@ -49,7 +58,6 @@ body:
       label: "🔄 Comportamento Atual"
       description: "Explique como a funcionalidade funciona hoje."
       placeholder: |
-        Inclua:
         - Descrição objetiva do fluxo atual
         - Prints se necessário
         - Problemas identificados no comportamento atual
@@ -62,12 +70,34 @@ body:
       label: "✨ Comportamento Após a Melhoria"
       description: "Descreva como a funcionalidade deve se comportar depois da correção/otimização."
       placeholder: |
-        Inclua:
         - Quais passos serão alterados
         - Como ficará a interação do usuário
         - Regras modificadas ou removidas
     validations:
       required: true
+
+  - type: checkboxes
+    id: expectedImpact
+    attributes:
+      label: "📊 Impacto Esperado"
+      description: "Quais ganhos são esperados após aplicar a melhoria?"
+      options:
+        - label: "Melhoria de performance"
+        - label: "Melhoria de usabilidade/UX"
+        - label: "Redução de erros/falhas"
+        - label: "Aumento de segurança"
+        - label: "Redução de custos"
+        - label: "Outro (descrever abaixo)"
+    validations:
+      required: true
+
+  - type: input
+    id: otherImpact
+    attributes:
+      label: "📌 Outro impacto (se selecionado)"
+      description: "Descreva aqui se escolheu 'Outro'"
+    validations:
+      required: false
 
   - type: textarea
     id: designAndReferences
@@ -75,14 +105,10 @@ body:
       label: "🎨 Design & Referências"
       description: "Inclua material visual e referências importantes."
       placeholder: |
-        ### Screenshots Atual
-        [Adicionar capturas do comportamento atual aqui]
-
-        ### Figma / Mockups
-        [Link para o design atualizado]
-
-        ### Benchmarks / Inspirações
-        [Links externos, referências de UX, etc.]
+        - Links para designs no Figma
+        - Links para diagramas relevantes
+        - Screenshots de referência
+        - Documentação relevante
     validations:
       required: false
 
@@ -92,7 +118,6 @@ body:
       label: "🛠️ Detalhes Técnicos"
       description: "Informações técnicas relevantes para implementação."
       placeholder: |
-        Exemplos:
         - Componentes que serão afetados
         - Mudanças necessárias na API
         - Serviços/contexts envolvidos

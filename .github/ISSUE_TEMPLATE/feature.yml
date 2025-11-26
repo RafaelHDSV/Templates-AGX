@@ -7,9 +7,8 @@ body:
     id: motivation
     attributes:
       label: "💡 Motivação"
-      description: "Por que esta feature é necessária? Qual problema resolve e qual impacto traz?"
+      description: "Por que esta feature é necessária? Qual problema ela resolve? Qual o contexto atual?"
       placeholder: |
-        Exemplos:
         - Usuários não conseguem visualizar X, dificultando Y.
         - Processo atual é manual e causa erros em Z.
         - Necessário para habilitar o fluxo ABC.
@@ -22,7 +21,6 @@ body:
       label: "🎯 Objetivo"
       description: "Objetivo direto e mensurável desta funcionalidade."
       placeholder: |
-        Exemplos:
         - Permitir consulta em tempo real.
         - Reduzir tempo do fluxo de 5 para 2 passos.
         - Criar base técnica para recurso futuro XYZ.
@@ -47,7 +45,6 @@ body:
       label: "📋 Descrição Detalhada"
       description: "Explique o funcionamento, regras de negócio e fluxos principais."
       placeholder: |
-        Inclua:
         - Resumo da funcionalidade
         - Regras de negócio
         - Validações importantes
@@ -55,37 +52,38 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: figma_link
+  - type: textarea
+    id: designAndReferences
     attributes:
-      label: "🔗 Link do Figma"
-      description: "Design relacionado à funcionalidade."
-      placeholder: "https://www.figma.com/file/..."
+      label: "🎨 Design & Referências"
+      description: "Inclua material visual e referências importantes."
+      placeholder: |
+        - Links para designs no Figma
+        - Links para diagramas relevantes
+        - Screenshots de referência
+        - Documentação relevante
     validations:
       required: false
 
-  - type: input
-    id: diagram_link
+
+  - type: textarea
+    id: technicalDetails
     attributes:
-      label: "🔗 Link do Diagrama (draw.io ou similar)"
-      description: "Diagramas relevantes."
-      placeholder: "https://app.diagrams.net/..."
+      label: "🛠️ Detalhes Técnicos"
+      description: "Informações técnicas relevantes para implementação."
+      placeholder: |
+        - Componentes que serão afetados
+        - Mudanças necessárias na API
+        - Serviços/contexts envolvidos
+        - Possíveis impactos no versionamento
     validations:
       required: false
 
   - type: textarea
-    id: references_context
+    id: additionalInformation
     attributes:
-      label: "🔗 Referências e Contexto Adicional"
-      description: "Links para issues relacionadas, documentação, etc."
-      placeholder: "- Issue relacionada: #123\n- Documentação: https://..."
-    validations:
-      required: false
-
-  - type: textarea
-    id: additional_notes
-    attributes:
-      label: "📝 Observações Adicionais"
-      description: "Informações complementares relevantes."
+      label: "📝 Informações Adicionais"
+      description: "Contexto extra ou informações úteis para o time."
+      placeholder: "Adicione detalhes relevantes que não se encaixam nos campos anteriores."
     validations:
       required: false

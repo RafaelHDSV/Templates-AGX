@@ -3,19 +3,112 @@ description: Relatar erro ou comportamento inesperado
 title: "[BUG] "
 
 body:
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: "📝 Descrição do problema"
+      description: "Forneça uma descrição clara e objetiva do erro ou comportamento inesperado."
+      placeholder: "Explique de forma objetiva o que aconteceu"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce_steps
+    attributes:
+      label: "🔄 Passos para reproduzir"
+      description: "Liste os passos necessários para reproduzir o problema."
+      placeholder: |
+        1. Acesse [...]
+        2. Clique em [...]
+        3. Informe [...]
+        4. Veja o erro [...]
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: "✅ Checklist"
+      description: "Liste exatamente o que deve ser implementado."
+      placeholder: |
+        - [ ] Criar endpoint X
+        - [ ] Implementar tela Y
+        - [ ] Ajustar fluxo Z
+    validations:
+      required: true      
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: "❌ Comportamento atual"
+      description: "Descreva o que está acontecendo de errado."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "✅ Comportamento esperado"
+      description: "Descreva como deveria funcionar."
+    validations:
+      required: true  
+
+  - type: dropdown
+    id: user_impact
+    attributes:
+      label: "🚨 Impacto"
+      description: "Estime quantos usuários foram impactados."
+      options:
+        - "Todos"
+        - "Muitos"
+        - "Alguns"
+        - "1"
+    validations:
+      required: true
 
   - type: dropdown
     id: severity
     attributes:
-      label: "🚨 Severidade"
-      description: "Selecione o impacto real do problema."
+      label: "☢️ Gravidade"
+      description: "Selecione o potêncial destrutivo para o negócio."
       options:
-        - Crítico — sistema indisponível ou bloqueio total (produção afetada)
-        - Alto — função essencial quebrada, sem workaround
-        - Médio — problema funcional com workaround possível
-        - Baixo — visual, texto ou comportamento não bloqueante
+        - Crítico (Parada total, perda financeira, dados, segurança)
+        - Alto (Maioria das funcionalidades afetadas, impacto significativo)
+        - Médio (Algumas funcionalidades afetadas, impacto moderado)
+        - Baixo (Mínimo impacto, funcionalidade alternativa disponível)
     validations:
       required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: "🔁 Frequência do problema"
+      description: "Com que frequência o problema ocorre?"
+      options:
+        - "Sempre ocorre"
+        - "Frequentemente"
+        - "Intermitente"
+        - "Raro"
+    validations:
+      required: true
+
+  - type: input
+    id: user_identification
+    attributes:
+      label: "👤 Usuário afetado"
+      description: "Email, CPF, ID interno ou outro identificador."
+      placeholder: "ex: usuario@exemplo.com"
+    validations:
+      required: false
+
+  - type: input
+    id: error_datetime
+    attributes:
+      label: "🕐 Data e hora do erro"
+      description: "Quando o problema foi observado pela primeira vez."
+      placeholder: "DD/MM/YYYY HH:MM"
+    validations:
+      required: false
 
   - type: dropdown
     id: environment
@@ -89,115 +182,37 @@ body:
     validations:
       required: false
 
-  - type: input
-    id: user_identification
-    attributes:
-      label: "👤 Usuário afetado"
-      description: "Email, CPF, ID interno ou outro identificador."
-      placeholder: "ex: usuario@exemplo.com"
-    validations:
-      required: false
-
-  - type: dropdown
-    id: user_quantity
-    attributes:
-      label: "👥 Quantidade de usuários afetados"
-      description: "Estime quantos usuários foram impactados."
-      options:
-        - "1"
-        - "Alguns"
-        - "Muitos"
-        - "Todos"
-    validations:
-      required: false
-
-  - type: input
-    id: error_datetime
-    attributes:
-      label: "🕐 Data e hora do erro"
-      description: "Quando o problema foi observado pela primeira vez."
-      placeholder: "DD/MM/YYYY HH:MM"
-    validations:
-      required: false
-
-  - type: dropdown
-    id: frequency
-    attributes:
-      label: "🔁 Frequência do problema"
-      description: "Com que frequência o problema ocorre?"
-      options:
-        - "Sempre ocorre"
-        - "Frequentemente"
-        - "Intermitente"
-        - "Raro"
-    validations:
-      required: true
-
   - type: textarea
-    id: bug_description
+    id: designAndReferences
     attributes:
-      label: "📝 Descrição do problema"
-      description: "Forneça uma descrição clara e objetiva do erro ou comportamento inesperado."
-      placeholder: "Explique de forma objetiva o que aconteceu"
-    validations:
-      required: true
-
-  - type: textarea
-    id: reproduce_steps
-    attributes:
-      label: "🔄 Passos para reproduzir"
-      description: "Liste os passos necessários para reproduzir o problema."
+      label: "🎨 Design & Referências"
+      description: "Inclua material visual e referências importantes."
       placeholder: |
-        1. Acesse [...]
-        2. Clique em [...]
-        3. Informe [...]
-        4. Veja o erro [...]
+        - Links para designs no Figma
+        - Links para diagramas relevantes
+        - Screenshots de referência
+        - Documentação relevante
     validations:
-      required: true
+      required: false
 
   - type: textarea
-    id: actual_behavior
+    id: technicalDetails
     attributes:
-      label: "❌ Comportamento atual"
-      description: "Descreva o que está acontecendo de errado."
-    validations:
-      required: true
-
-  - type: textarea
-    id: expected_behavior
-    attributes:
-      label: "✅ Comportamento esperado"
-      description: "Descreva como deveria funcionar."
-    validations:
-      required: true
-
-  - type: textarea
-    id: technical_data
-    attributes:
-      label: "🛠️ Dados técnicos"
-      description: "Cole logs, payloads, request/response, headers, IDs, stacktrace etc."
+      label: "🛠️ Detalhes Técnicos"
+      description: "Informações técnicas relevantes para implementação."
       placeholder: |
-        - ID de proposta:
-        - Request payload:
-        - Response:
-        - Logs:
-        - Console/Network:
-        - Device / Browser / SO:
+        - Componentes que serão afetados
+        - Mudanças necessárias na API
+        - Serviços/contexts envolvidos
+        - Possíveis impactos no versionamento
     validations:
       required: false
 
   - type: textarea
-    id: evidence
+    id: additionalInformation
     attributes:
-      label: "📸 Evidências (screenshots / vídeos / logs)"
-      description: "Cole aqui imagens ou URLs"
-    validations:
-      required: false
-
-  - type: textarea
-    id: extra_info
-    attributes:
-      label: "📌 Informações adicionais"
-      description: "Qualquer detalhe extra que ajude na investigação"
+      label: "📝 Informações Adicionais"
+      description: "Contexto extra ou informações úteis para o time."
+      placeholder: "Adicione detalhes relevantes que não se encaixam nos campos anteriores."
     validations:
       required: false

@@ -6,16 +6,50 @@ body:
   - type: textarea
     id: motivation
     attributes:
-      label: "🎯 Motivação"
-      description: "Por que esta atividade técnica é necessária? O que acontece se não fizermos?"
+      label: "💡 Motivação"
+      description: "Por que esta dívida técnica é necessária? Qual problema ela resolve? Qual o contexto atual?"
       placeholder: |
-        Exemplos:
-        - Código difícil de manter ou estender.
-        - Alto risco de regressão devido à complexidade.
-        - Acúmulo de débitos antigos que impactam velocidade do time.
-        - Arquitetura atual limita implementação de novas features.
+        - Código difícil de manter ou entender.
+        - Performance insatisfatória em determinada funcionalidade.
+        - Riscos de bugs ou falhas devido à complexidade atual.
     validations:
       required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: "🎯 Objetivo"
+      description: "Objetivo direto e mensurável desta funcionalidade."
+      placeholder: |
+        - Melhorar legibilidade do código.
+        - Reduzir tempo de resposta de Xms para Yms.
+        - Aumentar cobertura de testes em Z%.
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: "✅ Checklist"
+      description: "Liste exatamente o que deve ser implementado."
+      placeholder: |
+        - [ ] Refatorar módulo X
+        - [ ] Otimizar função Y
+        - [ ] Adicionar testes para Z
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📋 Descrição Detalhada"
+      description: "Explique o funcionamento, regras de negócio e fluxos principais."
+      placeholder: |
+        - Resumo da dívida técnica
+        - Impactos atuais no sistema
+        - Justificativa para a intervenção
+    validations:
+      required: true   
 
   - type: checkboxes
     id: technicalDebtType
@@ -48,9 +82,9 @@ body:
       label: "📈 Benefício Esperado"
       description: "O impacto positivo após resolver esta dívida."
       options:
-        - Alto
-        - Médio
-        - Baixo
+        - Alto (Melhoria significativa na manutenção, performance ou segurança)
+        - Médio (Melhorias notáveis, mas não críticas)
+        - Baixo (Melhorias incrementais, impacto limitado)
     validations:
       required: true
 
@@ -60,49 +94,9 @@ body:
       label: "⏳ Esforço Estimado"
       description: "Complexidade e tempo aproximado."
       options:
-        - Alto
-        - Médio
-        - Baixo
-    validations:
-      required: true
-
-  - type: textarea
-    id: problemDescription
-    attributes:
-      label: "📝 Descrição do Problema"
-      description: "Descreva o comportamento, trecho de código ou estrutura que está causando o débito."
-      placeholder: |
-        Inclua:
-        - Qual parte do sistema está afetada
-        - Qual o problema identificado
-        - Exemplos de trechos de código ou comportamentos
-    validations:
-      required: true
-
-  - type: textarea
-    id: proposedSolution
-    attributes:
-      label: "✨ Solução Proposta"
-      description: "Explique a estratégia para resolver a dívida técnica."
-      placeholder: |
-        Exemplos:
-        - Extrair lógica duplicada para um serviço unificado.
-        - Reescrever módulo utilizando padrão X.
-        - Atualizar dependência Y para versão mais recente.
-    validations:
-      required: true
-
-  - type: textarea
-    id: expectedImpact
-    attributes:
-      label: "📊 Impacto Esperado"
-      description: "Quais melhorias serão alcançadas?"
-      placeholder: |
-        Exemplos:
-        - **Performance:** Redução de Xms no processo Y.
-        - **Manutenibilidade:** Código mais simples e modular.
-        - **Segurança:** Eliminação de riscos devido a validações fracas.
-        - **Escalabilidade:** Base pronta para recursos futuros.
+        - Alto (Complexidade alta, muitas mudanças necessárias)
+        - Médio (Complexidade moderada, algumas mudanças necessárias)
+        - Baixo (Simples, poucas mudanças necessárias)
     validations:
       required: true
 
@@ -120,21 +114,49 @@ body:
       required: false
 
   - type: textarea
-    id: codeAndRelevantFiles
+    id: proposedSolution
     attributes:
-      label: "🔗 Código e Arquivos Relevantes"
-      description: "Liste arquivos, módulos ou trechos importantes para referência."
+      label: "✨ Solução Proposta"
+      description: "Explique a estratégia para resolver a dívida técnica."
       placeholder: |
-        - src/modules/...
-        - src/hooks/useXYZ.ts
-        - services/abcService.ts
+        - Extrair lógica duplicada para um serviço unificado.
+        - Reescrever módulo utilizando padrão X.
+        - Atualizar dependência Y para versão mais recente.
     validations:
       required: false
 
   - type: textarea
-    id: additionalNotes
+    id: designAndReferences
     attributes:
-      label: "📝 Observações Adicionais"
-      placeholder: "Informações extras, contexto ou anotações úteis."
+      label: "🎨 Design & Referências"
+      description: "Inclua material visual e referências importantes."
+      placeholder: |
+        - Links para designs no Figma
+        - Links para diagramas relevantes
+        - Screenshots de referência
+        - Documentação relevante
     validations:
       required: false
+
+  - type: textarea
+    id: technicalDetails
+    attributes:
+      label: "🛠️ Detalhes Técnicos"
+      description: "Informações técnicas relevantes para implementação."
+      placeholder: |
+        - Componentes que serão afetados
+        - Mudanças necessárias na API
+        - Serviços/contexts envolvidos
+        - Possíveis impactos no versionamento
+    validations:
+      required: false
+
+  - type: textarea
+    id: additionalInformation
+    attributes:
+      label: "📝 Informações Adicionais"
+      description: "Contexto extra ou informações úteis para o time."
+      placeholder: "Adicione detalhes relevantes que não se encaixam nos campos anteriores."
+    validations:
+      required: false
+

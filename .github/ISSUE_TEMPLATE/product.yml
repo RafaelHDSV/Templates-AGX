@@ -1,8 +1,69 @@
 name: Novo Produto
 description: Desenvolvimento de um novo produto
-title: "[Produto] "
+title: "[PRODUCT] "
 
 body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "💡 Motivação"
+      description: "Por que esta dívida técnica é necessária? Qual problema ela resolve? Qual o contexto atual?"
+      placeholder: |
+        - Código difícil de manter ou entender.
+        - Performance insatisfatória em determinada funcionalidade.
+        - Riscos de bugs ou falhas devido à complexidade atual.
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: "🎯 Objetivo"
+      description: "Objetivo direto e mensurável desta funcionalidade."
+      placeholder: |
+        - Melhorar legibilidade do código.
+        - Reduzir tempo de resposta de Xms para Yms.
+        - Aumentar cobertura de testes em Z%.
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: "✅ Checklist"
+      description: "Liste exatamente o que deve ser implementado."
+      placeholder: |
+        - [ ] Refatorar módulo X
+        - [ ] Otimizar função Y
+        - [ ] Adicionar testes para Z
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📋 Descrição Detalhada"
+      description: "Explique o funcionamento, regras de negócio e fluxos principais."
+      placeholder: |
+        - Resumo da dívida técnica
+        - Impactos atuais no sistema
+        - Justificativa para a intervenção
+    validations:
+      required: true   
+
+  - type: textarea
+    id: dependenciasExternas
+    attributes:
+      label: "📊 Dependências Externas"
+      description: Informe documentação, requisitos e dependências externas necessárias.
+      placeholder: |
+        - Documentação do banco: 
+        - Requisitos específicos: 
+        - Pré-requisitos técnicos: 
+        - Outras dependências: 
+    validations:
+      required: true
+
   - type: dropdown
     id: product
     attributes:
@@ -52,64 +113,39 @@ body:
       label: "📌 Outro banco (se selecionado)"
       description: "Descreva aqui se escolheu 'Outro'"
     validations:
-      required: false
+      required: false      
 
   - type: textarea
-    id: resumoExecutivo
+    id: designAndReferences
     attributes:
-      label: "📝 Resumo Executivo"
-      description: Descrição clara e concisa do novo produto que está sendo implementado.
-      placeholder: "Explique o objetivo geral do produto..."
-    validations:
-      required: true
-
-  - type: textarea
-    id: objetivoEscopo
-    attributes:
-      label: "🎯 Objetivo e Escopo"
-      description: Detalhe os objetivos específicos e o escopo desta implementação.
-      placeholder: "Quais dores serão resolvidas? Qual o escopo da entrega?"
-    validations:
-      required: true
-
-  - type: textarea
-    id: dependenciasExternas
-    attributes:
-      label: "📊 Dependências Externas"
-      description: Informe documentação, requisitos e dependências externas necessárias.
+      label: "🎨 Design & Referências"
+      description: "Inclua material visual e referências importantes."
       placeholder: |
-        - Documentação do banco: 
-        - Requisitos específicos: 
-        - Pré-requisitos técnicos: 
-        - Outras dependências: 
-    validations:
-      required: true
-
-  - type: textarea
-    id: designReferencias
-    attributes:
-      label: "🎨 Design e Referências"
-      description: Forneça links para designs, protótipos ou referências visuais.
-      placeholder: |
-        - **Figma**: 
-        - **Screenshots de referência**: 
-    validations:
-      required: true
-
-  - type: input
-    id: prazo
-    attributes:
-      label: "⏳ Prazo desejado"
-      description: "Data desejada para conclusão do desenvolvimento."
-      placeholder: "DD/MM/YYYY"
+        - Links para designs no Figma
+        - Links para diagramas relevantes
+        - Screenshots de referência
+        - Documentação relevante
     validations:
       required: false
 
   - type: textarea
-    id: observacoesAdicionais
+    id: technicalDetails
     attributes:
-      label: "📌 Observações Adicionais"
-      description: "Qualquer informação extra relevante para o desenvolvimento do produto."
-      placeholder: "Informações relevantes, riscos, histórico, anexos..."
+      label: "🛠️ Detalhes Técnicos"
+      description: "Informações técnicas relevantes para implementação."
+      placeholder: |
+        - Componentes que serão afetados
+        - Mudanças necessárias na API
+        - Serviços/contexts envolvidos
+        - Possíveis impactos no versionamento
+    validations:
+      required: false
+
+  - type: textarea
+    id: additionalInformation
+    attributes:
+      label: "📝 Informações Adicionais"
+      description: "Contexto extra ou informações úteis para o time."
+      placeholder: "Adicione detalhes relevantes que não se encaixam nos campos anteriores."
     validations:
       required: false
