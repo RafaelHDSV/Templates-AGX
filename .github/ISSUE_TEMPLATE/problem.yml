@@ -1,136 +1,203 @@
-name: problem
-description: Relatar erro ou problema identificado
-title: "[CRÍTICO/ALTO/MÉDIO] Erro ao realizar função X"
+name: Bug
+description: Relatar erro ou comportamento inesperado
+title: "[BUG] "
 
 body:
-  - type: textarea
-    id: severidade
+
+  - type: checkboxes
+    id: severity
     attributes:
       label: "🚨 Severidade"
-      value: |
-        - [ ] Crítico (afeta múltiplos usuários, impacto em produção)
-        - [ ] Alto (afeta funcionalidade importante)
-        - [ ] Médio (afeta alguns usuários, workaround disponível)
-        - [ ] Baixo (cosmético ou impacto mínimo)
+      description: "Selecione o impacto real do problema."
+      options:
+        - label: "Crítico — sistema indisponível ou bloqueio total (produção afetada)"
+        - label: "Alto — função essencial quebrada, sem workaround"
+        - label: "Médio — problema funcional com workaround possível"
+        - label: "Baixo — visual, texto ou comportamento não bloqueante"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: "🌐 Ambiente"
+      options:
+        - label: "Local"
+        - label: "Homologação"
+        - label: "Produção"
+    validations:
+      required: true
+
+  - type: input
+    id: environment_url
+    attributes:
+      label: "🔗 URL do ambiente"
+      placeholder: "https://www.indiky.com"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: product
+    attributes:
+      label: "📦 Produto"
+      options:
+        - label: "FGTS"
+        - label: "Novo (Margem)"
+        - label: "Saque Complementar"
+        - label: "Cartão"
+        - label: "Refinanciamento"
+        - label: "Outro"
     validations:
       required: true
 
   - type: textarea
-    id: dadosPrincipais
+    id: otherProduct
     attributes:
-      label: "📋 Dados Principais"
-      value: |
-        ### Ambiente
-        - [ ] Local
-        - [ ] Homologação
-        - [ ] Produção
+      label: "📌 Outro produto (se selecionado)"
+      placeholder: "Descreva aqui se escolheu 'Outro'"
+    validations:
+      required: false
 
-        **Link do ambiente**: [https://www.indiky.com]
-
-        ### Produto
-        - [ ] FGTS
-        - [ ] Novo (Margem)
-        - [ ] Saque Complementar
-        - [ ] Cartão
-        - [ ] Refinanciamento
-        - [ ] Outro: ___________
-
-        ### Banco
-        - [ ] PAN
-        - [ ] PINE
-        - [ ] CREFAZ
-        - [ ] C6
-        - [ ] BMG
-        - [ ] Mercantil do Brasil
-        - [ ] iCred
-        - [ ] Outro: ___________
-
-        ### Meio de Requisição
-        - [ ] RH400
-        - [ ] API
+  - type: checkboxes
+    id: bank
+    attributes:
+      label: "🏦 Banco"
+      options:
+        - label: "Afinz"
+        - label: "Banco PINE"
+        - label: "C6 Bank"
+        - label: "Crefaz"
+        - label: "Komatsu"
+        - label: "Nio Digital"
+        - label: "Orquestador"
+        - label: "QITech"
+        - label: "Rodobens"
+        - label: "Outro"
     validations:
       required: true
 
   - type: textarea
-    id: usuarioAfetado
+    id: otherBank
     attributes:
-      label: "👤 Usuário Afetado"
-      value: |
-        **Nível do usuário**: [Agx/Master/Corporação/etc]
+      label: "📌 Outro banco (se selecionado)"
+      placeholder: "Descreva aqui se escolheu 'Outro'"
+    validations:
+      required: false
 
-        **E-mail do usuário**: [XXX.XXX.XXX-XX]
+  - type: checkboxes
+    id: request_source
+    attributes:
+      label: "📨 Meio de Requisição"
+      options:
+        - label: "Plataforma (Fluxos RH400)"
+        - label: "API (requisições externas)"
+    validations:
+      required: false
 
-        **Quantidade de usuários afetados**: [1 ou múltiplos] 
+  - type: input
+    id: user_identification
+    attributes:
+      label: "👤 Usuário afetado"
+      description: "Email, CPF, ID interno ou outro identificador."
+      placeholder: "ex: usuario@exemplo.com"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: user_quantity
+    attributes:
+      label: "👥 Quantidade de usuários afetados"
+      options:
+        - "1"
+        - "Alguns"
+        - "Muitos"
+        - "Todos"
+    validations:
+      required: false
+
+  - type: input
+    id: error_datetime
+    attributes:
+      label: "🕐 Data e hora do erro"
+      placeholder: "DD/MM/YYYY HH:MM"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: "🔁 Frequência do problema"
+      options:
+        - "Sempre ocorre"
+        - "Frequentemente"
+        - "Intermitente"
+        - "Raro"
     validations:
       required: true
 
   - type: textarea
-    id: quandoOcorreu
+    id: bug_description
     attributes:
-      label: "🕐 Quando Ocorreu"
-      value: |
-        **Data e hora do erro**: [DD/MM/YYYY HH:MM:SS]
-
-        **Primeira ocorrência**: [quando foi visto pela primeira vez]
-
-        **Frequência**: [sempre ocorre / intermitente / raro]
+      label: "📝 Descrição do problema"
+      placeholder: "Explique de forma objetiva o que aconteceu"
     validations:
       required: true
 
   - type: textarea
-    id: descricaoDoErro
+    id: reproduce_steps
     attributes:
-      label: "📝 Descrição do Erro"
-      value: |
-        Uma descrição clara e concisa do erro encontrado.
+      label: "🔄 Passos para reproduzir"
+      placeholder: |
+        1. Acesse [...]
+        2. Clique em [...]
+        3. Informe [...]
+        4. Veja o erro [...]
     validations:
       required: true
 
   - type: textarea
-    id: passosParaReproduzir
+    id: actual_behavior
     attributes:
-      label: "🔄 Passos para Reproduzir"
-      value: |
-        1. Vá para [seção/tela]
-        2. Clique em [botão/elemento]
-        3. Preencha o campo [campo]
-        4. Observe o erro
+      label: "❌ Comportamento atual"
+      placeholder: "Descreva o que está acontecendo errado"
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "✅ Comportamento esperado"
+      placeholder: "Descreva como deveria funcionar"
+    validations:
+      required: true
     validations:
       required: true
 
   - type: textarea
-    id: comportamentoEsperado
+    id: technical_data
     attributes:
-      label: "✅ Comportamento Esperado"
-      value: |
-        Descreva qual deveria ser o comportamento correto.
+      label: "🛠️ Dados técnicos"
+      description: "Cole logs, payloads, request/response, headers, IDs, stacktrace etc."
+      placeholder: |
+        - ID de proposta:
+        - Request payload:
+        - Response:
+        - Logs:
+        - Console/Network:
+        - Device / Browser / SO:
     validations:
-      required: true
+      required: false
 
   - type: textarea
-    id: comportamentoAtual
+    id: evidence
     attributes:
-      label: "❌ Comportamento Atual"
-      value: |
-        Descreva o que está acontecendo agora de forma incorreta.
+      label: "📸 Evidências (screenshots / vídeos / logs)"
+      placeholder: "Cole aqui imagens ou URLs"
     validations:
-      required: true
+      required: false
 
   - type: textarea
-    id: screenshotsELogs
+    id: extra_info
     attributes:
-      label: "📸 Screenshots e Logs"
-      value: |
-        ### Screenshots
-        [Adicionar capturas de tela do erro]
+      label: "📌 Informações adicionais"
+      placeholder: "Qualquer detalhe extra que ajude na investigação"
     validations:
-      required: true
-
-  - type: textarea
-    id: informacoesAdicionais
-    attributes:
-      label: "📌 Informações Adicionais"
-      value: |
-        [Contexto adicional que possa ser útil]
-    validations:
-      required: true
+      required: false
