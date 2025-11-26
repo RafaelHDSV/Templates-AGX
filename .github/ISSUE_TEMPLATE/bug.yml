@@ -10,10 +10,10 @@ body:
       label: "🚨 Severidade"
       description: "Selecione o impacto real do problema."
       options:
-        - label: "Crítico — sistema indisponível ou bloqueio total (produção afetada)"
-        - label: "Alto — função essencial quebrada, sem workaround"
-        - label: "Médio — problema funcional com workaround possível"
-        - label: "Baixo — visual, texto ou comportamento não bloqueante"
+        - Crítico — sistema indisponível ou bloqueio total (produção afetada)
+        - Alto — função essencial quebrada, sem workaround
+        - Médio — problema funcional com workaround possível
+        - Baixo — visual, texto ou comportamento não bloqueante
     validations:
       required: true
 
@@ -23,9 +23,9 @@ body:
       label: "🌐 Ambiente"
       description: "Onde o problema foi identificado."
       options:
-        - label: "Local"
-        - label: "Homologação"
-        - label: "Produção"
+        - Local
+        - Homologação
+        - Produção
     validations:
       required: true
 
@@ -43,12 +43,12 @@ body:
     attributes:
       label: "📦 Produto"
       options:
-        - label: "FGTS"
-        - label: "Novo (Margem)"
-        - label: "Saque Complementar"
-        - label: "Cartão"
-        - label: "Refinanciamento"
-        - label: "Outro"
+        - FGTS
+        - Novo (Margem)
+        - Saque Complementar
+        - Cartão
+        - Refinanciamento
+        - Outro
     validations:
       required: true
 
