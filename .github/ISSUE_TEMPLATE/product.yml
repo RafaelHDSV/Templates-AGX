@@ -1,51 +1,74 @@
-name: new product
+name: Novo Produto
 description: Desenvolvimento de um novo produto
-title: "[Produto] - descrição"
+title: "[Produto] "
 
 body:
-  - type: textarea
-    id: dadosPrincipais
+  - type: dropdown
+    id: product
     attributes:
-      label: "📋 Dados Principais"
-      value: |
-        ### Meio de Requisição
-        - [ ] RH400
-        - [ ] API
-
-        ### Banco
-        - [ ] PAN
-        - [ ] Safra
-        - [ ] C6
-        - [ ] BMG
-        - [ ] Mercantil do Brasil
-        - [ ] iCred
-        - [ ] Outro: ___________
-
-        ### Produto
-        - [ ] FGTS
-        - [ ] Novo (Margem)
-        - [ ] Saque Complementar
-        - [ ] Cartão
-        - [ ] Refinanciamento
-        - [ ] Outro: ___________
+      label: "📦 Produto"
+      description: "Selecione o produto relacionado ao problema."
+      options:
+        - Indiky
+        - FGTS
+        - Novo (Margem)
+        - Saque Complementar
+        - Cartão
+        - Refinanciamento
+        - Outro
     validations:
       required: true
+
+  - type: input
+    id: otherProduct
+    attributes:
+      label: "📌 Outro produto (se selecionado)"
+      description: "Descreva aqui se escolheu 'Outro'"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: bank
+    attributes:
+      label: "🏦 Banco"
+      description: "Selecione o banco relacionado ao problema."
+      options:
+        - Afinz
+        - Banco PINE
+        - C6 Bank
+        - Crefaz
+        - Komatsu
+        - Nio Digital
+        - Orquestador
+        - QITech
+        - Rodobens
+        - Outro
+    validations:
+      required: true
+
+  - type: input
+    id: otherBank
+    attributes:
+      label: "📌 Outro banco (se selecionado)"
+      description: "Descreva aqui se escolheu 'Outro'"
+    validations:
+      required: false
 
   - type: textarea
     id: resumoExecutivo
     attributes:
       label: "📝 Resumo Executivo"
-      value: |
-        - Uma descrição clara e concisa do novo produto que está sendo implementado.
+      description: Descrição clara e concisa do novo produto que está sendo implementado.
+      placeholder: "Explique o objetivo geral do produto..."
     validations:
       required: true
 
   - type: textarea
-    id: objetivoEScopo
+    id: objetivoEscopo
     attributes:
       label: "🎯 Objetivo e Escopo"
-      value: |
-        - Descreva os objetivos específicos desta implementação e o escopo de trabalho esperado.
+      description: Detalhe os objetivos específicos e o escopo desta implementação.
+      placeholder: "Quais dores serão resolvidas? Qual o escopo da entrega?"
     validations:
       required: true
 
@@ -53,117 +76,40 @@ body:
     id: dependenciasExternas
     attributes:
       label: "📊 Dependências Externas"
-      value: |
-        - Documentação do banco: [link]
-        - Requisitos específicos: [descrever]
-        - Pré-requisitos técnicos: [descrever]
-        - Outras dependências: [descrever]
+      description: Informe documentação, requisitos e dependências externas necessárias.
+      placeholder: |
+        - Documentação do banco: 
+        - Requisitos específicos: 
+        - Pré-requisitos técnicos: 
+        - Outras dependências: 
     validations:
       required: true
 
   - type: textarea
-    id: jsonProposta
-    attributes:
-      label: "🔗 JSON Proposta"
-      value: |
-        - Objeto de inserção de proposta a ser enviado ao banco (requisitos mínimos):
-
-        ```json
-        {
-          "client": {
-            "cpf": "99999999999",
-            "name": "João da Silva",
-            "address": {
-              "zipcode": "195564",
-              "state": "SP"
-            }
-          }
-        }
-        ```
-    validations:
-      required: true
-
-  - type: textarea
-    id: jsonSimulacaoOpcional
-    attributes:
-      label: "🔗 JSON Simulação (Opcional)"
-      value: |
-        - Objeto de simulação retornada pelo banco:
-
-        ```json
-        {
-          "simulation": {
-            "amount": 10000,
-            "rate": 0.05,
-            "installments": 24
-          }
-        }
-        ```
-    validations:
-      required: true
-
-  - type: textarea
-    id: jsonIntegracao
-    attributes:
-      label: "🔗 JSON Integração"
-      value: |
-        - Objeto de integração da proposta com auto-contratação, organizando os steps e campos:
-
-        ```json
-        {
-          "informacaoInicial": {
-            "cpf": "",
-            "nome": ""
-          },
-          "endereco": {
-            "cep": "",
-            "estado": ""
-          }
-        }
-        ```
-    validations:
-      required: true
-
-  - type: textarea
-    id: designEReferencias
+    id: designReferencias
     attributes:
       label: "🎨 Design e Referências"
-      value: |
-        - **Figma**: [link-do-design]
-        - **Screenshots de referência**: [adicionar imagens]
+      description: Forneça links para designs, protótipos ou referências visuais.
+      placeholder: |
+        - **Figma**: 
+        - **Screenshots de referência**: 
     validations:
       required: true
 
-  - type: textarea
-    id: criteriosDeAceitacao
+  - type: input
+    id: prazo
     attributes:
-      label: "✅ Critérios de Aceitação"
-      value: |
-        - [ ] API integrada com o banco
-        - [ ] Fluxo de simulação funcionando
-        - [ ] Fluxo de contratação funcionando
-        - [ ] Testes unitários implementados
-        - [ ] Testes de integração implementados
-        - [ ] Documentação atualizada
-        - [ ] Homologado com o banco
+      label: "⏳ Prazo desejado"
+      description: "Data desejada para conclusão do desenvolvimento."
+      placeholder: "DD/MM/YYYY"
     validations:
-      required: true
-
-  - type: textarea
-    id: estimativaEPrazo
-    attributes:
-      label: "📅 Estimativa e Prazo"
-      value: |
-        - **Sprint estimada**: 
-        - **Prazo desejado**: 
-    validations:
-      required: true
+      required: false
 
   - type: textarea
     id: observacoesAdicionais
     attributes:
       label: "📌 Observações Adicionais"
-      value: |
-        - [Adicionar informações relevantes]
+      description: "Qualquer informação extra relevante para o desenvolvimento do produto."
+      placeholder: "Informações relevantes, riscos, histórico, anexos..."
     validations:
-      required: true
+      required: false
