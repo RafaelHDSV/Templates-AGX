@@ -44,6 +44,7 @@ body:
       label: "📦 Produto"
       description: "Selecione o produto relacionado ao problema."
       options:
+        - Indiky
         - FGTS
         - Novo (Margem)
         - Saque Complementar
@@ -88,16 +89,6 @@ body:
     validations:
       required: false
 
-  - type: checkboxes
-    id: request_source
-    attributes:
-      label: "📨 Meio de Requisição"
-      options:
-        - label: "Plataforma (Fluxos RH400)"
-        - label: "API (requisições externas)"
-    validations:
-      required: false
-
   - type: input
     id: user_identification
     attributes:
@@ -111,6 +102,7 @@ body:
     id: user_quantity
     attributes:
       label: "👥 Quantidade de usuários afetados"
+      description: "Estime quantos usuários foram impactados."
       options:
         - "1"
         - "Alguns"
@@ -123,6 +115,7 @@ body:
     id: error_datetime
     attributes:
       label: "🕐 Data e hora do erro"
+      description: "Quando o problema foi observado pela primeira vez."
       placeholder: "DD/MM/YYYY HH:MM"
     validations:
       required: false
@@ -131,6 +124,7 @@ body:
     id: frequency
     attributes:
       label: "🔁 Frequência do problema"
+      description: "Com que frequência o problema ocorre?"
       options:
         - "Sempre ocorre"
         - "Frequentemente"
@@ -143,6 +137,7 @@ body:
     id: bug_description
     attributes:
       label: "📝 Descrição do problema"
+      description: "Forneça uma descrição clara e objetiva do erro ou comportamento inesperado."
       placeholder: "Explique de forma objetiva o que aconteceu"
     validations:
       required: true
@@ -151,6 +146,7 @@ body:
     id: reproduce_steps
     attributes:
       label: "🔄 Passos para reproduzir"
+      description: "Liste os passos necessários para reproduzir o problema."
       placeholder: |
         1. Acesse [...]
         2. Clique em [...]
@@ -163,15 +159,13 @@ body:
     id: actual_behavior
     attributes:
       label: "❌ Comportamento atual"
-      placeholder: "Descreva o que está acontecendo errado"
+      description: "Descreva o que está acontecendo de errado."
 
   - type: textarea
     id: expected_behavior
     attributes:
       label: "✅ Comportamento esperado"
-      placeholder: "Descreva como deveria funcionar"
-    validations:
-      required: true
+      description: "Descreva como deveria funcionar."
     validations:
       required: true
 
@@ -194,7 +188,7 @@ body:
     id: evidence
     attributes:
       label: "📸 Evidências (screenshots / vídeos / logs)"
-      placeholder: "Cole aqui imagens ou URLs"
+      description: "Cole aqui imagens ou URLs"
     validations:
       required: false
 
@@ -202,6 +196,6 @@ body:
     id: extra_info
     attributes:
       label: "📌 Informações adicionais"
-      placeholder: "Qualquer detalhe extra que ajude na investigação"
+      description: "Qualquer detalhe extra que ajude na investigação"
     validations:
       required: false
