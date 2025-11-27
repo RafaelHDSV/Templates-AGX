@@ -82,9 +82,9 @@ body:
       label: "📈 Benefício Esperado"
       description: "O impacto positivo após resolver esta dívida."
       options:
-        - Alto (Melhoria significativa na manutenção, performance ou segurança)
-        - Médio (Melhorias notáveis, mas não críticas)
         - Baixo (Melhorias incrementais, impacto limitado)
+        - Médio (Melhorias notáveis, mas não críticas)
+        - Alto (Melhoria significativa na manutenção, performance ou segurança)
     validations:
       required: true
 
@@ -94,9 +94,9 @@ body:
       label: "⏳ Esforço Estimado"
       description: "Complexidade e tempo aproximado."
       options:
-        - Alto (Complexidade alta, muitas mudanças necessárias)
-        - Médio (Complexidade moderada, algumas mudanças necessárias)
         - Baixo (Simples, poucas mudanças necessárias)
+        - Médio (Complexidade moderada, algumas mudanças necessárias)
+        - Alto (Complexidade alta, muitas mudanças necessárias)
     validations:
       required: true
 
@@ -126,15 +126,14 @@ body:
       required: false
 
   - type: textarea
-    id: designAndReferences
+    id: evidences
     attributes:
-      label: "🎨 Design & Referências"
-      description: "Inclua material visual e referências importantes."
+      label: "📷 Evidências"
+      description: "Anexe capturas de tela, logs ou vídeos que ilustrem o problema."
       placeholder: |
-        - Links para designs no Figma
-        - Links para diagramas relevantes
-        - Screenshots de referência
-        - Documentação relevante
+        - Screenshots
+        - Trechos de logs
+        - Vídeos demonstrativos
     validations:
       required: false
 
@@ -144,10 +143,10 @@ body:
       label: "🛠️ Detalhes Técnicos"
       description: "Informações técnicas relevantes para implementação."
       placeholder: |
-        - Componentes que serão afetados
-        - Mudanças necessárias na API
-        - Serviços/contexts envolvidos
-        - Possíveis impactos no versionamento
+          - Requisições HTTP utilizadas na reprodução (ex.: curl)
+          - Logs do servidor ou console
+          - Arquivos de configuração relevantes
+          - Versões de software envolvidas
     validations:
       required: false
 

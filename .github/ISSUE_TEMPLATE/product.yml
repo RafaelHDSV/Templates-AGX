@@ -76,7 +76,6 @@ body:
         - Crefaz
         - Komatsu
         - Nio Digital
-        - Orquestador
         - QITech
         - Rodobens
         - Outro
@@ -97,8 +96,9 @@ body:
       label: "🎨 Design & Referências"
       description: "Inclua material visual e referências importantes."
       placeholder: |
-        - Links para designs no Figma
-        - Links para diagramas relevantes
+        - https://www.figma.com/design/1234
+        - Protótipo interativo (modo apresentação)
+        - https://www.drawio.com/example-diagrams
         - Screenshots de referência
         - Documentação relevante
     validations:
@@ -110,10 +110,10 @@ body:
       label: "🛠️ Detalhes Técnicos"
       description: "Informações técnicas relevantes para implementação."
       placeholder: |
-        - Componentes que serão afetados
-        - Mudanças necessárias na API
-        - Serviços/contexts envolvidos
-        - Possíveis impactos no versionamento
+          - Requisições HTTP utilizadas na reprodução (ex.: curl)
+          - Logs do servidor ou console
+          - Arquivos de configuração relevantes
+          - Versões de software envolvidas
     validations:
       required: false
 

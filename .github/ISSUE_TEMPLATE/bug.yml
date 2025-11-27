@@ -59,10 +59,10 @@ body:
       label: "🚨 Impacto"
       description: "Estime quantos usuários foram impactados."
       options:
-        - "Todos"
-        - "Muitos"
-        - "Alguns"
         - "1"
+        - "Alguns"
+        - "Muitos"
+        - "Todos"
     validations:
       required: true
 
@@ -72,10 +72,10 @@ body:
       label: "☢️ Gravidade"
       description: "Selecione o potêncial destrutivo para o negócio."
       options:
-        - Crítico (Parada total, perda financeira, dados, segurança)
-        - Alto (Maioria das funcionalidades afetadas, impacto significativo)
-        - Médio (Algumas funcionalidades afetadas, impacto moderado)
         - Baixo (Mínimo impacto, funcionalidade alternativa disponível)
+        - Médio (Algumas funcionalidades afetadas, impacto moderado)
+        - Alto (Maioria das funcionalidades afetadas, impacto significativo)
+        - Crítico (Parada total, perda financeira, dados, segurança)
     validations:
       required: true
 
@@ -85,10 +85,10 @@ body:
       label: "🔁 Frequência do problema"
       description: "Com que frequência o problema ocorre?"
       options:
-        - "Sempre ocorre"
-        - "Frequentemente"
-        - "Intermitente"
         - "Raro"
+        - "Intermitente"
+        - "Frequentemente"
+        - "Sempre ocorre"
     validations:
       required: true
 
@@ -149,7 +149,6 @@ body:
         - Crefaz
         - Komatsu
         - Nio Digital
-        - Orquestador
         - QITech
         - Rodobens
         - Outro
@@ -183,15 +182,14 @@ body:
       required: false
 
   - type: textarea
-    id: designAndReferences
+    id: evidences
     attributes:
-      label: "🎨 Design & Referências"
-      description: "Inclua material visual e referências importantes."
+      label: "📷 Evidências"
+      description: "Anexe capturas de tela, logs ou vídeos que ilustrem o problema."
       placeholder: |
-        - Links para designs no Figma
-        - Links para diagramas relevantes
-        - Screenshots de referência
-        - Documentação relevante
+        - Screenshots
+        - Trechos de logs
+        - Vídeos demonstrativos
     validations:
       required: false
 
@@ -201,10 +199,10 @@ body:
       label: "🛠️ Detalhes Técnicos"
       description: "Informações técnicas relevantes para implementação."
       placeholder: |
-        - Componentes que serão afetados
-        - Mudanças necessárias na API
-        - Serviços/contexts envolvidos
-        - Possíveis impactos no versionamento
+          - Requisições HTTP utilizadas na reprodução (ex.: curl)
+          - Logs do servidor ou console
+          - Arquivos de configuração relevantes
+          - Versões de software envolvidas
     validations:
       required: false
 
