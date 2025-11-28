@@ -89,14 +89,16 @@ body:
       required: true
 
   - type: dropdown
-    id: effort
+    id: initialEstimate
     attributes:
-      label: "⏳ Esforço Estimado"
-      description: "Complexidade e tempo aproximado."
+      label: "🗓️ Estimativa Inicial"
+      description: "Tempo aproximado para conclusão."
       options:
-        - Baixo (Simples, poucas mudanças necessárias)
-        - Médio (Complexidade moderada, algumas mudanças necessárias)
-        - Alto (Complexidade alta, muitas mudanças necessárias)
+        - Menos de 1 dia
+        - 1-3 dias
+        - 4-7 dias
+        - 1-2 semanas
+        - Mais de 2 semanas
     validations:
       required: true
 
@@ -129,24 +131,12 @@ body:
     id: evidences
     attributes:
       label: "📷 Evidências"
-      description: "Anexe capturas de tela, logs ou vídeos que ilustrem o problema."
+      description: "Anexe qualquer evidência que ajude a ilustrar o problema."
       placeholder: |
         - Screenshots
         - Trechos de logs
         - Vídeos demonstrativos
-    validations:
-      required: false
-
-  - type: textarea
-    id: technicalDetails
-    attributes:
-      label: "🛠️ Detalhes Técnicos"
-      description: "Informações técnicas relevantes para implementação."
-      placeholder: |
-          - Requisições HTTP utilizadas na reprodução (ex.: curl)
-          - Logs do servidor ou console
-          - Arquivos de configuração relevantes
-          - Versões de software envolvidas
+        - Requisições HTTP utilizadas na reprodução (ex.: curl)
     validations:
       required: false
 

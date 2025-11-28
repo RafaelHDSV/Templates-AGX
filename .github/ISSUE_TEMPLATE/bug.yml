@@ -26,18 +26,6 @@ body:
       required: true
 
   - type: textarea
-    id: checklist
-    attributes:
-      label: "✅ Checklist"
-      description: "Liste exatamente o que deve ser implementado."
-      placeholder: |
-        - [ ] Criar endpoint X
-        - [ ] Implementar tela Y
-        - [ ] Ajustar fluxo Z
-    validations:
-      required: true      
-
-  - type: textarea
     id: actual_behavior
     attributes:
       label: "❌ Comportamento atual"
@@ -185,24 +173,12 @@ body:
     id: evidences
     attributes:
       label: "📷 Evidências"
-      description: "Anexe capturas de tela, logs ou vídeos que ilustrem o problema."
+      description: "Anexe qualquer evidência que ajude a ilustrar o problema."
       placeholder: |
         - Screenshots
         - Trechos de logs
         - Vídeos demonstrativos
-    validations:
-      required: false
-
-  - type: textarea
-    id: technicalDetails
-    attributes:
-      label: "🛠️ Detalhes Técnicos"
-      description: "Informações técnicas relevantes para implementação."
-      placeholder: |
-          - Requisições HTTP utilizadas na reprodução (ex.: curl)
-          - Logs do servidor ou console
-          - Arquivos de configuração relevantes
-          - Versões de software envolvidas
+        - Requisições HTTP utilizadas na reprodução (ex.: curl)
     validations:
       required: false
 

@@ -21,9 +21,10 @@ body:
       label: "🎯 Objetivo"
       description: "Objetivo direto e mensurável desta funcionalidade."
       placeholder: |
-        - Melhorar legibilidade do código.
-        - Reduzir tempo de resposta de Xms para Yms.
-        - Aumentar cobertura de testes em Z%.
+        - Desenvolver uma API para X.
+        - Criar uma interface de usuário para Y.
+        - Integrar com o sistema Z.
+        - Criar o produto mínimo viável (MVP) para X.
     validations:
       required: true
 
@@ -33,9 +34,11 @@ body:
       label: "✅ Checklist"
       description: "Liste exatamente o que deve ser implementado."
       placeholder: |
-        - [ ] Refatorar módulo X
-        - [ ] Otimizar função Y
-        - [ ] Adicionar testes para Z
+        - [ ] Definir requisitos do produto
+        - [ ] Desenvolver protótipo
+        - [ ] Realizar testes de usabilidade
+        - [ ] Implementar funcionalidades principais
+        - [ ] Preparar lançamento
     validations:
       required: true
 
@@ -45,9 +48,9 @@ body:
       label: "📋 Descrição Detalhada"
       description: "Explique o funcionamento, regras de negócio e fluxos principais."
       placeholder: |
-        - Resumo da dívida técnica
-        - Impactos atuais no sistema
-        - Justificativa para a intervenção
+        - O sistema deve permitir que o usuário faça X ao clicar em Y.
+        - Regras de negócio envolvem A, B e C.
+        - Fluxo principal: 1. Login; 2. Acesso ao dashboard; 3. Realização da ação X.
     validations:
       required: true   
 
