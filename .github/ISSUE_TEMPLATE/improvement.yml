@@ -33,9 +33,9 @@ body:
       label: "✅ Checklist"
       description: "Liste exatamente o que deve ser implementado."
       placeholder: |
-        - [ ] Criar endpoint X
-        - [ ] Implementar tela Y
-        - [ ] Ajustar fluxo Z
+        - [ ] Ajustar regra X
+        - [ ] Alterar layout Y
+        - [ ] Remover validação Z
     validations:
       required: true
 

@@ -1,6 +1,6 @@
 name: "Dívida Técnica"
 description: "Dívida técnica, refatoração ou limpeza de código"
-title: "[DEBT]"
+title: "[DEBT] "
 
 body:
   - type: textarea

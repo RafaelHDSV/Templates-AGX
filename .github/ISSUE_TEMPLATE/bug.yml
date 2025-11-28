@@ -47,10 +47,10 @@ body:
       label: "🚨 Impacto"
       description: "Estime quantos usuários foram impactados."
       options:
-        - "1"
-        - "Alguns"
-        - "Muitos"
-        - "Todos"
+        - "Apenas 1 usuário"
+        - "Alguns usuários"
+        - "Muitos usuários"
+        - "Todos os usuários"
     validations:
       required: true
 
@@ -60,10 +60,10 @@ body:
       label: "☢️ Gravidade"
       description: "Selecione o potêncial destrutivo para o negócio."
       options:
-        - Baixo (Mínimo impacto, funcionalidade alternativa disponível)
-        - Médio (Algumas funcionalidades afetadas, impacto moderado)
-        - Alto (Maioria das funcionalidades afetadas, impacto significativo)
-        - Crítico (Parada total, perda financeira, dados, segurança)
+        - "Baixo (Mínimo impacto, funcionalidade alternativa disponível)"
+        - "Médio (Algumas funcionalidades afetadas, impacto moderado)"
+        - "Alto (Maioria das funcionalidades afetadas, impacto significativo)"
+        - "Crítico (Parada total, perda financeira, dados, segurança)"
     validations:
       required: true
 

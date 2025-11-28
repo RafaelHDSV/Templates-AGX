@@ -53,25 +53,12 @@ body:
         - Fluxo principal: 1. Login; 2. Acesso ao dashboard; 3. Realização da ação X.
     validations:
       required: true   
-
-  - type: textarea
-    id: dependenciasExternas
-    attributes:
-      label: "📊 Dependências Externas"
-      description: Informe documentação, requisitos e dependências externas necessárias.
-      placeholder: |
-        - Documentação do banco: 
-        - Requisitos específicos: 
-        - Pré-requisitos técnicos: 
-        - Outras dependências: 
-    validations:
-      required: true
                   
   - type: dropdown
     id: bank
     attributes:
       label: "🏦 Banco"
-      description: "Selecione o banco relacionado ao problema."
+      description: "Selecione o banco relacionado ao produto."
       options:
         - Afinz
         - Banco PINE
@@ -92,6 +79,19 @@ body:
       description: "Descreva aqui se escolheu 'Outro'"
     validations:
       required: false      
+
+  - type: textarea
+    id: dependenciasExternas
+    attributes:
+      label: "📊 Dependências Externas"
+      description: Informe documentação, requisitos e dependências externas necessárias.
+      placeholder: |
+        - Documentação do banco: 
+        - Requisitos específicos: 
+        - Pré-requisitos técnicos: 
+        - Outras dependências: 
+    validations:
+      required: true      
 
   - type: textarea
     id: designAndReferences

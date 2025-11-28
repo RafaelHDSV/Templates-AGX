@@ -72,10 +72,10 @@ body:
       label: "🛠️ Detalhes Técnicos"
       description: "Informações técnicas relevantes para implementação."
       placeholder: |
-          - Requisições HTTP utilizadas na reprodução (ex.: curl)
-          - Logs do servidor ou console
-          - Arquivos de configuração relevantes
-          - Versões de software envolvidas
+         - Endpoints envolvidos
+         - Modelos de dados
+         - Requisitos de performance
+         - Permissões necessárias
     validations:
       required: false
 
