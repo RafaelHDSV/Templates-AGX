@@ -10,8 +10,8 @@ body:
       description: "Por que esta dívida técnica é necessária? Qual problema ela resolve? Qual o contexto atual?"
       placeholder: |
         - Código difícil de manter ou entender.
-        - Performance insatisfatória em determinada funcionalidade.
-        - Riscos de bugs ou falhas devido à complexidade atual.
+        - Performance insatisfatória.
+        - Riscos de bugs devido à complexidade atual.
     validations:
       required: true
 
@@ -19,11 +19,11 @@ body:
     id: objective
     attributes:
       label: "🎯 Objetivo"
-      description: "Objetivo direto e mensurável desta funcionalidade."
+      description: "Objetivo direto e mensurável desta correção."
       placeholder: |
         - Melhorar legibilidade do código.
         - Reduzir tempo de resposta de Xms para Yms.
-        - Aumentar cobertura de testes em Z%.
+        - Aumentar cobertura de testes.
     validations:
       required: true
 
@@ -43,13 +43,13 @@ body:
     id: description
     attributes:
       label: "📋 Descrição Detalhada"
-      description: "Explique o funcionamento, regras de negócio e fluxos principais."
+      description: "Explique regras de negócio, impacto e funcionamento atual."
       placeholder: |
         - Resumo da dívida técnica
         - Impactos atuais no sistema
         - Justificativa para a intervenção
     validations:
-      required: true   
+      required: true
 
   - type: checkboxes
     id: technicalDebtType
@@ -71,7 +71,7 @@ body:
   - type: textarea
     id: otherDebtType
     attributes:
-      label: "📌 Outro tipo de dívida (se selecionado)"
+      label: "📌 Outro tipo (se selecionado)"
       placeholder: "Descreva aqui se escolheu 'Outro'"
     validations:
       required: false
@@ -80,7 +80,7 @@ body:
     id: benefit
     attributes:
       label: "📈 Benefício Esperado"
-      description: "O impacto positivo após resolver esta dívida."
+      description: "Impacto positivo após resolver a dívida."
       options:
         - Baixo (Melhorias incrementais, impacto limitado)
         - Médio (Melhorias notáveis, mas não críticas)
@@ -110,8 +110,8 @@ body:
       placeholder: |
         - Possíveis regressões
         - Componentes afetados
-        - Dependências internas ou externas
-        - Mudanças que podem impactar outros fluxos
+        - Dependências internas/externas
+        - Riscos de quebra de fluxo
     validations:
       required: false
 
@@ -121,9 +121,9 @@ body:
       label: "✨ Solução Proposta"
       description: "Explique a estratégia para resolver a dívida técnica."
       placeholder: |
-        - Extrair lógica duplicada para um serviço unificado.
-        - Reescrever módulo utilizando padrão X.
-        - Atualizar dependência Y para versão mais recente.
+        - Extrair lógica duplicada
+        - Reescrever módulo em padrão X
+        - Atualizar dependência Y
     validations:
       required: false
 
@@ -148,4 +148,3 @@ body:
       placeholder: "Adicione detalhes relevantes que não se encaixam nos campos anteriores."
     validations:
       required: false
-

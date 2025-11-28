@@ -39,7 +39,7 @@ body:
       label: "✅ Comportamento esperado"
       description: "Descreva como deveria funcionar."
     validations:
-      required: true  
+      required: true
 
   - type: dropdown
     id: user_impact
@@ -58,7 +58,7 @@ body:
     id: severity
     attributes:
       label: "☢️ Gravidade"
-      description: "Selecione o potêncial destrutivo para o negócio."
+      description: "Selecione o potencial destrutivo para o negócio."
       options:
         - "Baixo (Mínimo impacto, funcionalidade alternativa disponível)"
         - "Médio (Algumas funcionalidades afetadas, impacto moderado)"
