@@ -1,4 +1,4 @@
-#### ⭐ 1. Issue: [XXXX](https://github.com/orgs/AGX-Software/projects/XXXX)
+#### ⭐ 1. Issue: [XXXX](https://github.com/AGX-Software/board/issues/XXXX)
 
 #### 🔗 2. Pull Requests (Links)
 
