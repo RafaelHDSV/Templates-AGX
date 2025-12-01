@@ -99,7 +99,7 @@ body:
       description: "Link do ambiente onde o problema ocorreu."
       placeholder: "https://www.indiky.com"
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: product

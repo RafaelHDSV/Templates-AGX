@@ -9,7 +9,7 @@ permissions:
   issues: write
 
 jobs:
-  cleanup_and_add_to_project:
+  cleanup_empty_sections:
     runs-on: ubuntu-latest
     steps:
 
